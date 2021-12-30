@@ -1,0 +1,64 @@
+.platos {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10em;
+  margin-bottom: 10em;
+}
+
+.huecas {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10em;
+  margin-bottom: 10em;
+}
+
+.redirect_button {
+  background-color: #ce901e;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  margin-left: 3em;
+  margin-right: 3em;
+  font-family: "Rouge Script", cursive;
+  font-size: 2em;
+}
+
+.title {
+  text-align: center;
+  font-family: "Rouge Script", cursive;
+  font-size: 6rem;
+}
+
+.image_container {
+  background-color: #ce901e;
+  width: 300px;
+  height: 160px;
+  padding: 0.5em;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+.image_menu {
+  object-fit: contain;
+}
+
+.image_logo {
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+}
+.redirect_button_nos {
+  background-color: #ce901e;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  margin-left: 3em;
+  margin-right: 3em;
+  font-size: 1.3em;
+}
+
+

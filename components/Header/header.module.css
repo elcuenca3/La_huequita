@@ -1,0 +1,22 @@
+.container {
+  background-color: #ce6e1e;
+  padding: 1em;
+  color: white;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap-reverse;  
+
+}
+.menu > li {
+  margin-left: auto ;
+  margin-right: auto;
+  padding: 0 1em 0 1em;
+}
+.loja{
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+}

@@ -1,0 +1,38 @@
+
+  .image_container{
+  background-color: #b1772c;
+  width: 300px;
+  height: 160px;
+  padding: 0.5em;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+.catalogue {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10em;
+  margin-bottom: 10em;
+}
+.redirect_button_nos {
+  background-color: #ce901e;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  margin-left: 3em;
+  margin-right: 3em;
+  font-size: 1.3em;
+
+}
+.ingL{
+  display: flex;
+  object-fit: contain;
+}
+.ingC{
+  object-fit: contain;
+
+}
+.text{
+  text-align: center;
+}
