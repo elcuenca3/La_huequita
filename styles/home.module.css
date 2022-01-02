@@ -17,7 +17,7 @@
 }
 
 .redirect_button {
-  background-color: #ce901e;
+  background-color: #e4802e;
   color: white;
   padding: 0.5em 1em;
   border-radius: 0.5em;
@@ -25,6 +25,7 @@
   margin-right: 3em;
   font-family: "Rouge Script", cursive;
   font-size: 2em;
+  transition: all 0.25s;
 }
 
 .title {
@@ -34,12 +35,13 @@
 }
 
 .image_container {
-  background-color: #ce901e;
+  background-color: rgba(255, 187, 97, 0.671);
   width: 300px;
   height: 160px;
   padding: 0.5em;
   margin-left: 3em;
   margin-right: 3em;
+
 }
 
 .image_menu {
@@ -52,13 +54,18 @@
   display: none;
 }
 .redirect_button_nos {
-  background-color: #ce901e;
+  background-color: #e4802e;
   color: white;
   padding: 0.5em 1em;
   border-radius: 0.5em;
   margin-left: 3em;
   margin-right: 3em;
   font-size: 1.3em;
+  
+}
+.redirect_button:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
 

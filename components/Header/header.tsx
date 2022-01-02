@@ -6,6 +6,7 @@ import Image from "next/image";
 const Header = () => {
   return (
     <div className={styles.container}>
+      <div className={styles.loja}>
       <Image
             src="/images/loja.png"
             alt="loja"
@@ -13,6 +14,7 @@ const Header = () => {
             height="50"
             className={styles.loja}
           />
+          </div>
       <ul className={styles.menu}>
         
         <li>

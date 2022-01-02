@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Catalogue = () => {
   return (
-    <div >
+    <div>
       <Header />
       <h1 className={styles.title}>Catalogo</h1>
       <p className={styles.text}>
@@ -16,25 +16,76 @@ const Catalogue = () => {
         esta dividida por Categorías.
       </p>
 
-      <div className={styles.image_container}>
-      <Image
-            src="/images/sopa.png"
-            alt="Sopa"
-            width="280"
-            height="140"
-            className={styles.ingL}
-          />
-            
-          </div>
-          <Image
-            src="/images/p_tipico.png"
-            alt="ptipico"
-            width="280"
-            height="140"
-            className={styles.ingC}
-          />
-        
+      <div className={styles.catalogo}>
+        <Link href="#">
+      <div className={styles.card}>
+        <Image
+          src="/images/sopa.png"
+          alt="Sopa"
+          width="280"
+          height="140"
+          className={styles.image_container}
+        />
+        <p className="ncatalogo">Sopas</p>
+        </div>
+        </Link>
+        <div className={styles.card}>
+        <Image
+          src="/images/p_tipico.png"
+          alt="ptipico"
+          width="280"
+          height="130"
+          className={styles.image_container}
+        />
+           <p className="ncatalogo">Carnes</p>
       
+
+        </div>
+        <div className={styles.card}>
+        <Image
+          src="/images/p_tipico.png"
+          alt="ptipico"
+          width="280"
+          height="140"
+          className={styles.image_container}
+        />
+      </div>
+      <div className={styles.card}>
+        <Image
+          src="/images/p_tipico.png"
+          alt="ptipico"
+          width="280"
+          height="140"
+          className={styles.image_container}
+        />
+      </div>
+      <div className={styles.card}>
+        <Image
+          src="/images/p_tipico.png"
+          alt="ptipico"
+          width="280"
+          height="140"
+          className={styles.image_container}
+        />
+      </div>
+      <div className={styles.card}>
+        <Image
+          src="/images/p_tipico.png"
+          alt="ptipico"
+          width="280"
+          height="140"
+          className={styles.image_container}
+        />
+      </div>
+      </div>
+      <div
+        style={{ display: "flex", justifyContent: "center", marginTop: "50%" }}
+      >
+        <section className={styles.mascatalogo}>
+          <a href="#">Mas Catalgo</a>
+        </section>
+      </div>
+
       <Footer />
     </div>
   );
