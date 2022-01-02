@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import Header from "../components/Header/header";
+import Header from "../components/Header/header1";
 import React from "react";
 import styles from "../styles/huecas.module.css";
 import Footer from "../components/Footer/footer";

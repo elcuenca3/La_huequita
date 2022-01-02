@@ -12,7 +12,7 @@ const Footer = () => {
         height="100"
         alt=""
       />
-      <div style={{ textAlign: "center" }}>Copyrigth 2021</div>
+      <div style={{ textAlign: "center" }}>Copyright © 2022 La Huequita. Todos los Derechos Reservados</div>
     </footer>
   );
 };
