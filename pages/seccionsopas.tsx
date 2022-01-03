@@ -5,89 +5,89 @@ import styles from "../styles/catalogue.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const Catalogue = () => {
+const seccionSopas = () => {
   return (
     <div>
       <Header />
-      <h1 className={styles.title}>Catalogo</h1>
+      <h1 className={styles.title}>Sopas</h1>
       <p className={styles.text}>
-        En esta seccion encontraras los platos tipicos mas conocidos y más
+        En esta seccion encontraras las Sopas más conocidos y más
         vendidos de la provincia de Loja, deleitate con nuestra gatronomia que
-        esta dividida por Categorías.
+        esta dividida por Secciones.
       </p>
 
       <div className={styles.catalogo}>
-        <Link href="/seccionsopas">
+        <Link href="/repe">
       <div className={styles.card}>
         <Image
-          src="/images/sopa.png"
+          src="/images/repe.jpg"
           alt="Sopa"
           width="280"
           height="140"
           className={styles.image_container}
         />
-        <p className="ncatalogo">Sopas</p>
+        <p className="ncatalogo">Repe</p>
         </div>
         </Link>
         <div className={styles.card}>
         <Image
-          src="/images/p_tipico.png"
+          src="/images/arveja.jpg"
           alt="ptipico"
           width="280"
           height="130"
           className={styles.image_container}
         />
-           <p className="ncatalogo">Platos Tipicos</p>
+           <p className="ncatalogo">Arveja con Guineo</p>
       
 
         </div>
         <div className={styles.card}>
         <Image
-          src="/images/postre.png"
+          src="/images/sancocho.jpg"
           alt="ptipico"
           width="280"
           height="140"
           className={styles.image_container}
         />
-        <p className="ncatalogo">Postres</p>
+        <p className="ncatalogo">Sancocho</p>
       </div>
       <div className={styles.card}>
         <Image
-          src="/images/vegetales.png"
+          src="/images/bola.jpg"
           alt="ptipico"
           width="280"
           height="140"
           className={styles.image_container}
         />
-        <p className="ncatalogo">Vegetariano</p>
+        <p className="ncatalogo">Caldo de Bola</p>
       </div>
       
       <div className={styles.card}>
         <Image
-          src="/images/carnes.png"
+          src="/images/caldogallinas.jpg"
           alt="ptipico"
           width="280"
           height="140"
           className={styles.image_container}
         />
-         <p className="ncatalogo">Carnes</p>
+         <p className="ncatalogo">Caldo de Gallina</p>
       </div>
       <div className={styles.card}>
         <Image
-          src="/images/pescado.png"
+          src="/images/hueso.jpg"
           alt="ptipico"
           width="280"
           height="140"
           className={styles.image_container}
         />
-         <p className="ncatalogo">Pescados</p>
+         <p className="ncatalogo">Caldo de Hueso</p>
       </div>
       </div>
       <div
         style={{ display: "flex", justifyContent: "center", marginTop: "6%" }}
       >
         <section className={styles.mascatalogo}>
-          <a href="#">Mas Catalgo</a>
+          <a href="#">Más Sopas</a>
         </section>
       </div>
 
@@ -96,4 +96,4 @@ const Catalogue = () => {
   );
 };
 
-export default Catalogue;
+export default seccionSopas;
