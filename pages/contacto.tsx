@@ -26,6 +26,21 @@ const Contacto = () => {
                     <a href="#"><i className="fab fa-instagram"></i></a>
 
                 </div>
+                <div className={styles.huecas}>
+
+        <div className={styles.card}>
+          <img
+            src="/images/logo1.png"
+            alt=""
+          />
+          <h4>Desarrolladores</h4>
+          <p>
+            Erick 
+            - Luis  
+            - Rommel
+          </p>
+        </div>
+        </div>
             </div>
 
             <form action="" method="GET" className={styles.formulario}>
