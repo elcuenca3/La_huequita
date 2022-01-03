@@ -2,8 +2,6 @@ import React from "react";
 import Header from "../components/Header/header1";
 import Footer from "../components/Footer/footer";
 import styles from "../styles/contacto.module.css";
-import Image from "next/image";
-import Link from "next/link";
 
 const Contacto = () => {
     return (

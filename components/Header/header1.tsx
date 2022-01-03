@@ -6,15 +6,19 @@ import Image from "next/image";
 const Header = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.loja}>
+      <Link href="/">     
+       <div className={styles.logo}>
+      
       <Image
             src="/images/logo1.png"
             alt="logo"
-            width="200"
-            height="75"
-            className={styles.loja}
+            width="325"
+            height="190"
+            className={styles.logoa}
           />
           </div>
+          </Link>
+
       <ul className={styles.menu}>
         
         <li>

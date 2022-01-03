@@ -1,39 +1,45 @@
 .container {
-  background-color: #e4802e;
-  padding: 1em;
-  color: white;
+    background-color: #e4802e;
+    padding: 2.5em;
+    color: white;
+    display: flex;
 }
 
 .menu {
-  color: rgb(236, 236, 236);
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap-reverse; 
-  padding-left: 15em; 
-
+    color: rgb(236, 236, 236);
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    padding-left: 15em;
 }
-.menu > li {  
-  position: relative;
-  left: 40%;
-  margin-left: 20px ;
-  margin-right: 20px;
-  padding:  15px 30px 15px 15px;
-  flex-direction: row-reverse;
-  transition: all 0.25s;
 
-
-
+.menu>li {
+    position: relative;
+    left: 70%;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: medium;
+    padding: 15px 30px 15px 15px;
+    flex-direction: row-reverse;
+    transition: all 0.25s;
 }
-.menu > li:hover{
-  background-color:rgb(255, 236, 220);
-  border-radius: 50px 125px 100px 10px;
-  color: rgb(0, 0, 0);
-  transition: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+
+.menu>li:hover {
+    background-color: rgb(255, 236, 220);
+    border-radius: 50px 125px 100px 10px;
+    color: rgb(0, 0, 0);
+    transition: cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
-.loja{
-  position: absolute;
-  top: 1.8em;
-  padding-left: 80px;
-  padding-right: auto;
-  
+
+.loja {
+    position: absolute;
+    padding-left: 80px;
+    padding-right: auto;
+}
+
+.logo {
+    position: absolute;
+    bottom: 90px;
+    padding-bottom: 500px;
+    box-shadow: #e6e6e6;
 }

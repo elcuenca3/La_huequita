@@ -12,10 +12,10 @@ const Home: NextPage = () => {
       <h1 className={styles.title}>Te damos la bienvenida a</h1>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Image
-          src="https://raw.githubusercontent.com/RommelOjeda/imagenes/main/sin-cadena.png"
+          src="/images/logo1.png"
           alt=""
-          width="580"
-          height="225"
+          width="570"
+          height="320"
           className={styles.image_logo}
         />
       </div>

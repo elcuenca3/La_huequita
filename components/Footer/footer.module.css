@@ -1,6 +1,7 @@
 .container {
-  background-color: #464646;
-  color: white;
-  padding: 1em;
-  margin-top: 1em;
+    background-color: #464646;
+    color: white;
+    padding: 1em;
+    margin-top: 1em;
+    display: flexbox;
 }

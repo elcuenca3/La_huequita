@@ -37,45 +37,50 @@ const Catalogue = () => {
           height="130"
           className={styles.image_container}
         />
-           <p className="ncatalogo">Carnes</p>
+           <p className="ncatalogo">Platos Tipicos</p>
       
 
         </div>
         <div className={styles.card}>
         <Image
-          src="/images/p_tipico.png"
+          src="/images/postre.png"
           alt="ptipico"
           width="280"
           height="140"
           className={styles.image_container}
         />
+        <p className="ncatalogo">Postres</p>
       </div>
       <div className={styles.card}>
         <Image
-          src="/images/p_tipico.png"
+          src="/images/vegetales.png"
           alt="ptipico"
           width="280"
           height="140"
           className={styles.image_container}
         />
+        <p className="ncatalogo">Vegetariano</p>
+      </div>
+      
+      <div className={styles.card}>
+        <Image
+          src="/images/carnes.png"
+          alt="ptipico"
+          width="280"
+          height="140"
+          className={styles.image_container}
+        />
+         <p className="ncatalogo">Carnes</p>
       </div>
       <div className={styles.card}>
         <Image
-          src="/images/p_tipico.png"
+          src="/images/pescado.png"
           alt="ptipico"
           width="280"
           height="140"
           className={styles.image_container}
         />
-      </div>
-      <div className={styles.card}>
-        <Image
-          src="/images/p_tipico.png"
-          alt="ptipico"
-          width="280"
-          height="140"
-          className={styles.image_container}
-        />
+         <p className="ncatalogo">Pescados</p>
       </div>
       </div>
       <div

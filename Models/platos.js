@@ -1,20 +1,26 @@
-import {Schema,model,models} from "mongoose";
+import { Schema, model, models } from "mongoose";
 
-const platos= new Schema({
-    title:{
+const platos = new Schema({
+    titulo: {
         type: String,
-        required:[true,'title require'],
-        unique:true,
+        required: [true, 'title require'],
+        unique: true,
         trim: true,
-        maxlength: [50,'title require']
+        maxlength: [50, 'title require']
+    },
+    description: {
+        type: Array,
+        required: [true, 'title require'],
+        unique: true,
+        trim: true,
+        maxlength: [50, 'title require']
     }
 
-},{
-    timetamps:true,
-    versionkey:false
+}, {
+    timetamps: true,
+    versionkey: false
 })
 
 //crear modelo
 
-export default models.Platos ||  model("Platos",platos);
-
+export default models.Platos || model("Platos", platos);
