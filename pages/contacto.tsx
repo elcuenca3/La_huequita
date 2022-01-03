@@ -20,12 +20,7 @@ const Contacto = () => {
                 <div className={styles.col}>
                     <p>📞(+593) 0000-111 <br/>📞(+593) 1111-000</p>
                 </div>
-                <div className={styles.redes}>
-                    <a href="#"><i className="fab fa-facebook-f"></i></a>
-                    <a href="#"><i className="fab fa-twitter"></i></a>
-                    <a href="#"><i className="fab fa-instagram"></i></a>
-
-                </div>
+                
                 <div className={styles.huecas}>
 
         <div className={styles.card}>
