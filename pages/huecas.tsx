@@ -3,6 +3,7 @@ import Header from "../components/Header/header1";
 import React from "react";
 import styles from "../styles/huecas.module.css";
 import Footer from "../components/Footer/footer";
+import Link from "next/link";
 
 const huecas: NextPage = () => {
   return (
@@ -25,7 +26,9 @@ const huecas: NextPage = () => {
             sueños, a entregado su vida entera a la cocina y llevamos la
             herencia de su sabor y pasión por lo que hacemos.
           </p>
-          <a href="#">Visitar</a>
+          <Link href="/mamalola">
+            <a href="#">Visitar</a>
+          </Link> 
         </div>
 
         <div className={styles.card}>
