@@ -1,20 +1,36 @@
 import { dbConect } from '../../../utils/mongoose';
-import Task from '../../../Models/platos'   
+import Plato from '../../../Models/platos'
 
-dbConect()
+dbConect();
 
-export default async function platos(req,res) {
+export default async function platos(req, res) {
 
-   switch(req.method){
-     case "GET":
-      const Platos= await Task.find();
-      return res.status(200).json(Platos);
+    const { method, body } = req;
 
-      default:
-        return res.status(400).json({msg:"no es el metodo"});
+    switch (method) {
+        case "GET":
+            try {
+                const Platos = await Plato.find();
+                return res.status(200).json(Platos);
+            } catch (error) {
+                return res.status(500).json({ error: error.message });
+
+            }
+        case "POST":
+            try {
+                const newPlato = new Plato(body);
+                const savedPlato = await newPlato.save();
+                return res.status(201).json(savedPlato);
+
+            } catch (error) {
+                return res.status(400).json({ error: error.message });
+
+            }
+
+        default:
+            return res.status(400).json({ msg: "no es el metodo" });
 
 
-   }
+    }
 
-  }
-   
+}

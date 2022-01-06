@@ -17,7 +17,7 @@ const Catalogue = () => {
       </p>
 
       <div className={styles.catalogo}>
-        <Link href="/seccionsopas">
+        <Link href="#">
       <div className={styles.card}>
         <Image
           src="/images/sopa.png"
@@ -84,7 +84,7 @@ const Catalogue = () => {
       </div>
       </div>
       <div
-        style={{ display: "flex", justifyContent: "center", marginTop: "6%" }}
+        style={{ display: "flex", justifyContent: "center", marginTop: "50%" }}
       >
         <section className={styles.mascatalogo}>
           <a href="#">Mas Catalgo</a>
