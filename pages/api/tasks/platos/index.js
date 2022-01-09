@@ -1,5 +1,5 @@
-import { dbConect } from '../../../utils/mongoose';
-import Plato from '../../../Models/platos';
+import { dbConect } from '../../../../utils/mongoose';
+import Plato from '../../../../Models/platos';
 
 dbConect();
 
