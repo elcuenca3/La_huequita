@@ -22,8 +22,8 @@ const Catalogue = () => {
         <Image
           src="/images/sopa.png"
           alt="Sopa"
-          width="280"
-          height="140"
+          width="330"
+          height="180"
           className={styles.image_container}
         />
         <p className="ncatalogo">Sopas</p>
@@ -33,8 +33,8 @@ const Catalogue = () => {
         <Image
           src="/images/p_tipico.png"
           alt="ptipico"
-          width="280"
-          height="130"
+          width="330"
+          height="180"
           className={styles.image_container}
         />
            <p className="ncatalogo">Platos Tipicos</p>
@@ -45,8 +45,8 @@ const Catalogue = () => {
         <Image
           src="/images/postre.png"
           alt="ptipico"
-          width="280"
-          height="140"
+          width="330"
+          height="180"
           className={styles.image_container}
         />
         <p className="ncatalogo">Postres</p>
@@ -55,8 +55,8 @@ const Catalogue = () => {
         <Image
           src="/images/vegetales.png"
           alt="ptipico"
-          width="280"
-          height="140"
+          width="330"
+          height="180"
           className={styles.image_container}
         />
         <p className="ncatalogo">Vegetariano</p>
@@ -66,8 +66,8 @@ const Catalogue = () => {
         <Image
           src="/images/carnes.png"
           alt="ptipico"
-          width="280"
-          height="140"
+          width="330"
+          height="180"
           className={styles.image_container}
         />
          <p className="ncatalogo">Carnes</p>
@@ -76,15 +76,45 @@ const Catalogue = () => {
         <Image
           src="/images/pescado.png"
           alt="ptipico"
-          width="280"
-          height="140"
+          width="330"
+          height="180"
           className={styles.image_container}
         />
          <p className="ncatalogo">Pescados</p>
       </div>
+      <div className={styles.card}>
+        <Image
+          src="/images/bebidas.jpg"
+          alt="ptipico"
+          width="330"
+          height="180"
+          className={styles.image_container}
+        />
+         <p className="ncatalogo">Bebidas</p>
+      </div>
+      <div className={styles.card}>
+        <Image
+          src="/images/licores.jpg"
+          alt="ptipico"
+          width="330"
+          height="180"
+          className={styles.image_container}
+        />
+         <p className="ncatalogo">Licores</p>
+      </div>
+      <div className={styles.card}>
+        <Image
+          src="/images/productos.jpg"
+          alt="ptipico"
+          width="330"
+          height="180"
+          className={styles.image_container}
+        />
+         <p className="ncatalogo">Productos</p>
+      </div>
       </div>
       <div
-        style={{ display: "flex", justifyContent: "center", marginTop: "50%" }}
+        style={{ display: "flex", justifyContent: "center", marginTop: "30%" }}
       >
         <section className={styles.mascatalogo}>
           <a href="#">Mas Catalgo</a>

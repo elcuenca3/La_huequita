@@ -1,6 +1,6 @@
 .texts {
     text-align: center;
-    margin-right: 40px;
+    margin-right: 30px;
     border-radius: 20px 20px;
     background-color: rgb(238, 164, 94);
     padding: 50px;
@@ -8,20 +8,34 @@
     font-size: 1.5em;
     display: flex;
 }
-
+.texts1 {
+    text-align: center;
+    margin-right: 31em;
+    border-radius: 20px 20px;
+    background-color: rgb(238, 164, 94);
+    padding: 50px;
+    color: aliceblue;
+    font-size: 1.5em;
+    display: flex;
+}
+.title1{
+    text-align: center;
+    font-family: "Rouge Script", cursive;
+    font-size: 3.2rem;
+}
 .logo {
     display: contents;
     margin-bottom: 500px;
     padding-left: 200px;
     position: absolute;
-    justify-content: center;
+    justify-content:center;
 }
 
 .iz {
     display: inline-table;
     float: left;
     position: absolute;
-    padding-left: 100px;
+    padding-left: 170px;
     padding-right: 100px;
     overflow: hidden;
 }
@@ -34,12 +48,11 @@
     padding-right: 100px;
     overflow: hidden;
 }
-
 .redirect_button {
     background-color: #e4802e;
     color: white;
     padding: 0.5em 1em;
-    border-radius: 0.5em;
+    border-radius: 0.5em 0.5em;
     margin-left: 3em;
     margin-right: 3em;
     font-family: "Rouge Script", cursive;
@@ -47,7 +60,38 @@
     transition: all 0.25s;
 }
 
-.redirect_button:hover {
+.redirect_button :hover {
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.catalogo {
+    width: 100%;
+    max-width: 1200px;
+    height: 240px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.catalogo .card {
+    width: 330px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(23, 6, 63, 0.548);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    background-color: rgba(255, 187, 97, 0.671);
+}
+
+.catalogo .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.catalogo .card image_container {
+    width: 330px;
+    height: 200px;
+    border-radius: 15%;
 }
