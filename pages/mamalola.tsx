@@ -93,13 +93,20 @@ const mamalola = () => {
 
       <div
         style={{ display: "flex", justifyContent: "center", marginTop: "13%" }}>
+    </div>
+    <div>
         <section className={styles.ubicacion}>
           <a href="https://www.google.com/maps/dir/-3.9677321,-79.2112762/mama+lola+ubicacion/@-3.9726833,
           -79.210576,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x91cb480ab15a9075:0x67f5e9cff1e275ba!2m2
-          !1d-79.2010101!2d-3.9779515">Ven y Conoce</a>
+          !1d-79.2010101!2d-3.9779515" className={styles.text2}>Ven y Conoce</a>
           <p className={styles.texts2}/> 
         </section>
-      </div>
+        <section className={styles.ubicacion1}>
+          <a href="https://mamalolarestaurante.com/" className={styles.text3}>SitioWeb</a>
+          <p className={styles.texts2}/> 
+        </section>
+    </div>
+
     <br></br>
     <br></br>
     <br></br>
