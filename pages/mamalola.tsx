@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/Header/header1";
+import Header from "../components/Header/header";
 import Footer from "../components/Footer/footer";
 import styles from "../styles/mamalola.module.css";
 import Image from "next/image";

@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Header from "../components/Header/header1";
+import Header from "../components/Header/header";
 import Image from "next/image";
 import styles from "../styles/home.module.css";
 import Link from "next/link";

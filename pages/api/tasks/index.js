@@ -1,5 +1,6 @@
 import { dbConect } from '../../../utils/mongoose';
 import Plato from '../../../Models/platos'
+import hueca from '../../../Models/huecas'
 
 dbConect();
 
@@ -12,6 +13,8 @@ export default async function platos(req, res) {
             try {
                 const Platos = await Plato.find();
                 return res.status(200).json(Platos);
+                const huecas = await hueca.find();
+                return res.status(200).json(huecas);
             } catch (error) {
                 return res.status(500).json({ error: error.message });
 

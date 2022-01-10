@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../components/Header/header1";
-import Footer from "../components/Footer/footer";
-import styles from "../styles/catalogue.module.css";
+import Header from "../../components/Header/header";
+import Footer from "../../components/Footer/footer";
+import styles from "../../styles/catalogo.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -29,6 +29,7 @@ const Catalogue = () => {
         <p className="ncatalogo">Sopas</p>
         </div>
         </Link>
+        <Link  href="/platos">
         <div className={styles.card}>
         <Image
           src="/images/p_tipico.png"
@@ -41,6 +42,7 @@ const Catalogue = () => {
       
 
         </div>
+        </Link>
         <div className={styles.card}>
         <Image
           src="/images/postre.png"

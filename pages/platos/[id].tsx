@@ -1,8 +1,26 @@
+import Header from "../../components/Header/header";
+import Footer from "../../components/Footer/footer";
+import Image from "next/image"
+import Link from "next/link"
 const PlatoPage = ({plato}) => {
 
-    return (<div> 
+    return (<div>  
+      <Header />
+      <h1>{plato.nombre}</h1>
+      <Image
+       src={plato.imagen}
+       alt="Sopa"
+       width="480"
+       height="260"/>
+       <p>{plato.Historia}</p>
         {plato.ingredientes.map((ingrediente)=><li>{ingrediente}</li>)}
-         { plato && JSON.stringify(plato)} </div>)
+        {plato.huecas.map((huecas)=><li>{huecas}</li>)}
+        {plato.preparacion.map((preparacion)=><li>{preparacion}</li>)}
+        {/*
+         { plato && JSON.stringify(plato)}
+         */}
+         <Footer />
+          </div>)
 }
 
 

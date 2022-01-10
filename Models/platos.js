@@ -8,6 +8,13 @@ const platos = new Schema({
         trim: true,
         maxlength: [70, 'title require']
     },
+    imagen: {
+        type: String,
+        required: [true, 'title require'],
+        unique: true,
+        trim: true,
+        maxlength: [200, 'title require']
+    },
     categoria: {
         type: Array,
         required: [true, 'ingredientes requeridos'],
