@@ -11,21 +11,24 @@ const Header = () => {
       
       <Image
             src="/images/logo1.png"
+            layout='fixed'
             alt="logo"
-            width="325"
-            height="190"
+            width="200"
+            height="120"
             className={styles.logoa}
           />
           </div>
           </Link>
 
       <ul className={styles.menu}>
-        
-        <li>
+          {/*Asi se hace
+          
+          */}
           <Link href="/">
+        <li>
             <a>Inicio</a>
-          </Link>
         </li>
+          </Link>
         <li>
           <Link href="/catalogue">
             <a>Catalogo</a>

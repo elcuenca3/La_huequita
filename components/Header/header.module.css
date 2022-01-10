@@ -3,6 +3,7 @@
     padding: 2.5em;
     color: white;
     display: flex;
+    align-items: center;
 }
 
 .menu {
@@ -10,18 +11,17 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap-reverse;
-    padding-left: 15em;
 }
 
 .menu>li {
     position: relative;
-    left: 70%;
     margin-left: 20px;
     margin-right: 20px;
     font-size: medium;
     padding: 15px 30px 15px 15px;
     flex-direction: row-reverse;
     transition: all 0.25s;
+    cursor: pointer;
 }
 
 .menu>li:hover {
@@ -38,8 +38,5 @@
 }
 
 .logo {
-    position: absolute;
-    bottom: 135px;
-    padding-bottom: 500px;
     box-shadow: #e6e6e6;
 }
