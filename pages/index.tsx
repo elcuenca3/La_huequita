@@ -55,7 +55,7 @@ const Home: NextPage = () => {
           <a className={styles.redirect_button}>Catalogo de Platos</a>
         </Link>
         </div>
-        </div>
+      </div>
 
       <div
         style={{ display: "flex", justifyContent: "center", marginTop: "27em" }}
