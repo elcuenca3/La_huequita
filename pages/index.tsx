@@ -84,8 +84,6 @@ const Home: NextPage = () => {
           className={styles.image_container}
         />
            <p className="ncatalogo">Platos Tipicos</p>
-      
-
         </div>
         <div className={styles.card}>
         <Image
