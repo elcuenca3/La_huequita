@@ -48,10 +48,10 @@ const Header = () => {
           
         </li>
         </Link>
-        <Link href="/languaje">
+        <Link href="/formulario">
         <li>
           
-            <a>Formularios</a>
+            <a>Formulario</a>
           
         </li>
         </Link>
