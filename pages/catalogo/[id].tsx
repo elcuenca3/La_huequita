@@ -3,11 +3,11 @@ import Footer from "../../components/Footer/footer";
 import Image from "next/image"
 import styles from "../../styles/id.module.css";
 import Link from "next/link"
-const PlatoPage = ({plato}) => {
+const PlatoPage = ({catal}) => {
 
     return (<div>  
       <Header />
-      { plato && JSON.stringify(plato)}
+
          <Footer />
           </div>)
 }
@@ -15,11 +15,11 @@ const PlatoPage = ({plato}) => {
 
 export async function getServerSideProps(context) {
   const {id} = context.params
-  const res= await fetch(`http://localhost:3000/api/catalogo/busqueda`)
-  const plato=await res.json()
+  const res= await fetch(`http://localhost:3000/api/catalogo/busqueda/${id}`)
+  const catal= await res.json()
   return{
     props:{
-      plato,
+      catal,
     }
   }
   

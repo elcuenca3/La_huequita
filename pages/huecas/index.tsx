@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../components/Header/header";
 import Footer from "../../components/Footer/footer";
 import styles from "../../styles/huecas.module.css";
-import { Card } from "../../components/Card/card";
+import { Card, CardHueca } from "../../components/Card/card";
 
 
 
@@ -18,7 +18,7 @@ const Catalogue = ({huec}) => {
       <div className={styles.container}>
         {huec.map(huec  =>
         (
-            <Card key={huec._id} id={huec._id} imagen={huec.imagen} nombre={huec.nombre} description={huec.descripcion}/>
+            <CardHueca key={huec._id} id={huec._id} imagen={huec.imagen} nombre={huec.nombre} description={huec.descripcion}/>
         ))}
         
         </div>

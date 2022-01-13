@@ -1,8 +1,8 @@
 import { NextPage } from "next";
-import Header from "../components/Header/header";
+import Header from "../../components/Header/header";
 import React from "react";
 import styles from "../styles/huecas.module.css";
-import Footer from "../components/Footer/footer";
+import Footer from "../../components/Footer/footer";
 import Link from "next/link";
 
 const huecas: NextPage = () => {

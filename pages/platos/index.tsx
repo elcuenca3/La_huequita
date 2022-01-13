@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Card } from "../../components/Card/card";
+import { Card, CardPlato } from "../../components/Card/card";
 import Footer from "../../components/Footer/footer"
 import Header from "../../components/Header/header"
 import styles from "../../styles/platos.module.css";
@@ -12,7 +12,7 @@ const Platos = ({cplato})=> {
         <div className={styles.container}>
         {cplato.map(cplato=>
         (
-            <Card key={cplato._id} id={cplato._id} imagen={cplato.imagen} nombre={cplato.nombre} description={cplato.descripcion}/>
+            <CardPlato key={cplato._id} id={cplato._id} imagen={cplato.imagen} nombre={cplato.nombre} description={cplato.descripcion}/>
         ))}
         
         </div>

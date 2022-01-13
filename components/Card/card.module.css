@@ -26,3 +26,7 @@
 .image {
     object-fit: contain;
 }
+
+.titulo {
+    order: "ASC";
+}

@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../components/Header/header";
 import Footer from "../../components/Footer/footer";
 import styles from "../../styles/catalogo.module.css";
-import { Card } from "../../components/Card/card";
+import { Card, CardCata } from "../../components/Card/card";
 import stylesc from "../../styles/platos.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,11 +20,10 @@ const Catalogue = ({cata}) => {
       <div className={styles  .container}>
         {cata.map(cata=>
         (
-            <Card key={cata._id} id={cata._id} imagen={cata.imagen} nombre={cata.nombre} />
+            <CardCata key={cata._id} id={cata._id} imagen={cata.imagen} nombre={cata.nombre} />
         ))}
         
         </div>
-        console 
 
         { cata && JSON.stringify(cata)}
 

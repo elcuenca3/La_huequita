@@ -37,43 +37,7 @@ const PlatoPage = ({plato}) => {
             {plato.preparacion.map((preparacion)=><li>{preparacion}</li>)}
             <p className={styles.texts3}/> 
           </div>
-          {/* 
-          <h2 className={styles.titulo1}>Te pueden Interesar estos platos</h2>
-          <div className={styles.catalogo}>
-        <Link href="#">
-      <div className={styles.card}>
-        <Image
-          src="/images/fritada.jpg"
-          alt="Sopa"
-          width="330"
-          height="180"
-          className={styles.image_container}
-        />
-        <p className="ncatalogo">Fritada</p>
-        </div>
-        </Link>
-        <div className={styles.card}>
-        <Image
-          src="/images/tamal.jpg"
-          alt="ptipico"
-          width="330"
-          height="180"
-          className={styles.image_container}
-        />
-           <p className="ncatalogo">Tamal Lojano</p>
-        </div>
-        <div className={styles.card}>
-        <Image
-          src="/images/seco.jpg"
-          alt="ptipico"
-          width="330"
-          height="180"
-          className={styles.image_container}
-        />
-        <p className="ncatalogo">Seco de Chivo</p>
-      </div>
-      </div>
-      */}
+         
         </div>
         
         {/*
