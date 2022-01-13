@@ -25,7 +25,6 @@ const Catalogue = ({cata}) => {
         
         </div>
 
-        { cata && JSON.stringify(cata)}
 
       <Footer />
     </div>

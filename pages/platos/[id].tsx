@@ -1,11 +1,12 @@
 import Header from "../../components/Header/header";
 import Footer from "../../components/Footer/footer";
 import Image from "next/image"
-import styles from "../../styles/id.module.css";
+import styles from "../../styles/platos.module.css";
 import Link from "next/link"
 const PlatoPage = ({plato}) => {
 
-    return (<div>  
+    return (<div> 
+ 
       <Header />
         <h1 className={styles.titulo}>{plato.nombre}</h1>
         <br></br>

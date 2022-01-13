@@ -31,26 +31,30 @@ const Header = () => {
           </Link>
           <Link href="/catalogo">
         <li>
-          
             <a>Catalogo</a>
+        </li>
+        </Link>
+        <Link href="/huecas">
+        <li>
+          
+            <a>Huecas</a>
           
         </li>
         </Link>
+        <Link href="/contacto">
         <li>
-          <Link href="/huecas">
-            <a>Huecas</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/contacto">
+          
             <a>Contactos</a>
-          </Link>
+          
         </li>
+        </Link>
+        <Link href="/languaje">
         <li>
-          <Link href="/languaje">
-            <a>Idioma</a>
-          </Link>
+          
+            <a>Formularios</a>
+          
         </li>
+        </Link>
       </ul>
     </div>
   );

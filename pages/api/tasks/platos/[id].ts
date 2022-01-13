@@ -10,7 +10,7 @@ export default async(req:NextApiRequest, res:NextApiResponse) => {
     const { id } = req.query
     if(req.method == 'GET'){
         const plato = await Plato.findById(id)
-        console.log(plato)
+      
 
         if (!plato) return res.status(404).json({ msg: "no hay plato" })
         return res.status(200).json(plato)

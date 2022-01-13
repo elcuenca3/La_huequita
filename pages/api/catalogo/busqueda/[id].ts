@@ -8,16 +8,16 @@ dbConect();
 
 export default async(req:NextApiRequest, res:NextApiResponse) => {
     console.log('Obteneindo')
-    const { id ,nombre } = req.query
+    const { id ,categoria  } = req.query
     if(req.method == 'GET'){
-        const catalogo = await Catalogo.find({nombre})
-        const plato = await Plato.findOne({nombre: catalogo})
-        console.log(plato)
-        
-
-        console.log(catalogo) 
-
+        const catalogo = await Catalogo.findById(id)
+        const ncat= catalogo.nombre;
+        const plato = await Plato.find({categoria: ncat})
+             
+        //const plato = await Plato.find({nombre: {$eq: 'platotip'}})
+        console.log(catalogo.nombre) 
         if (!catalogo) return res.status(404).json({ msg: "no hay catalogo" })
-        return res.status(200).json(catalogo)
+        return res.status(200).json(plato)
     }
 }
+

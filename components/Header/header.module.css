@@ -18,8 +18,8 @@
 
 .menu>li {
     position: relative;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
     font-size: medium;
     padding: 25px;
     flex-direction: row;

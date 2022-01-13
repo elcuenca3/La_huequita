@@ -7,10 +7,10 @@ dbConect();
 
 export default async(req:NextApiRequest, res:NextApiResponse) => {
     console.log('Obteneindo')
-    const { nombre } = req.query
+    const { id } = req.query
 
     if(req.method == 'GET'){
-        const huecas = await Hueca.find({nombre})
+        const huecas = await Hueca.findById(id)
         console.log(huecas)
 
         if (!huecas) return res.status(404).json({ msg: "no hay huecas" })
