@@ -12,7 +12,7 @@
     list-style: none;
     display: flex;
     position: absolute;
-    left: 800px;
+    left: 700px;
     flex-wrap: wrap;
 }
 
@@ -35,6 +35,6 @@
 }
 
 .logo {
-    padding: auto;
+    padding: 0px 60px;
     cursor: pointer;
 }

@@ -1,15 +1,63 @@
 .container {
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
     display: flex;
-    justify-self: center;
     flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+.titulo{
+    text-align: left;
+    padding-left: 100px;
+}
+.imagenes .image{
+    margin: -140px 1em;  /*altura*/
+    text-align: left;
+    padding-left: 30px;
+    display: flex;
+    object-fit: contain;
+}
+.imagenes .image1{
+    margin: -28em 7em;  
+    text-align: right;   
 }
 
 .texts {
+    margin: -430px 43.1em; 
+    width: 46em;
+    border-radius: 10px 10px;
+    background-color: rgb(238, 164, 94);
+    padding: 230px 0px 238px;
+}
+.texts1{
     text-align: center;
-    margin: 20px;
+    margin: 60px;
     border-radius: 20px 20px;
     background-color: rgb(238, 164, 94);
-    padding: 50px;
-    color: aliceblue;
-    font-size: x-large;
+    padding: 60px;
+    color: rgb(255, 255, 255);
+    font-size: 140%;
+}
+.histo{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: xx-large;
+    margin: 15em 2em; 
+    background-color: rgb(238, 164, 94);
+    color: rgb(255, 255, 255);
+    border-radius: 10px 10px;
+    padding: 15px;
+}
+.titulo1{
+    text-align: center;
+    font-family: "Rouge Script";
+    font-size: 5rem;
+    margin: -5.7em; 
+}
+.ubica{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+    margin: 15em; 
 }

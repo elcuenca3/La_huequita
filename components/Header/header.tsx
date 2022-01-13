@@ -47,8 +47,8 @@ const Header = () => {
           </Link>
         </li>
         <li>
-          <Link href="/languaje">
-            <a>Idioma</a>
+          <Link href="/formulario">
+            <a>Formulario</a>
           </Link>
         </li>
       </ul>
