@@ -12,14 +12,14 @@ const PlatoPage = ({plato}) => {
       <div style={{ justifyContent: "center", display: "flex"}}>
       <Image
        src={plato.imagen}
-       alt="Sopa"
-       width="1024"
-       height="600"
+       alt={plato.nombre}
+       width="575"
+       height="300"
        className={styles.slider}
        />
       </div>
 
-       <p className={styles.texts1}>{plato.Historia}</p>
+       <p className={styles.texts1}>{plato.historia}</p>
         <div className={styles.menu}>
           <div className={styles.ingre}>
             <h4>Ingredientes</h4>
@@ -37,6 +37,7 @@ const PlatoPage = ({plato}) => {
             {plato.preparacion.map((preparacion)=><li>{preparacion}</li>)}
             <p className={styles.texts3}/> 
           </div>
+          {/* 
           <h2 className={styles.titulo1}>Te pueden Interesar estos platos</h2>
           <div className={styles.catalogo}>
         <Link href="#">
@@ -72,6 +73,7 @@ const PlatoPage = ({plato}) => {
         <p className="ncatalogo">Seco de Chivo</p>
       </div>
       </div>
+      */}
         </div>
         
         {/*
@@ -86,15 +88,14 @@ const PlatoPage = ({plato}) => {
 
 
 export async function getServerSideProps(context) {
-    const {id} = context.params
-    const res= await fetch(`http://localhost:3000/api/tasks/platos/${id}`)
-    const plato=await res.json()
-    return{
-      props:{
-        plato,
-      }
+  const {id} = context.params
+  const res= await fetch(`http://localhost:3000/api/tasks/platos/${id}`)
+  const plato=await res.json()
+  return{
+    props:{
+      plato,
     }
-    
-  };
-
+  }
+  
+};
 export default PlatoPage

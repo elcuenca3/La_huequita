@@ -1,17 +1,17 @@
 import { dbConect } from '../../../utils/mongoose';
-import Plato from '../../../Models/platos'
+import Catalogo from '../../../Models/catalogo'
 
 dbConect();
 
-export default async function platos(req, res) {
+export default async function catalogo(req, res) {
 
     const { method, body } = req;
 
     switch (method) {
         case "GET":
             try {
-                const Platos = await Plato.find();
-                return res.status(200).json(Platos);
+                const catalogos = await Catalogo.find();
+                return res.status(200).json(catalogos);
 
             } catch (error) {
                 return res.status(500).json({ error: error.message });

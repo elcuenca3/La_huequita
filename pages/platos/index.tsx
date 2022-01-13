@@ -12,7 +12,7 @@ const Platos = ({cplato})=> {
         <div className={styles.container}>
         {cplato.map(cplato=>
         (
-            <Card key={cplato._id} id={cplato._id} imagen={cplato.imagen} nombre={cplato.nombre} description={cplato.descripción}/>
+            <Card key={cplato._id} id={cplato._id} imagen={cplato.imagen} nombre={cplato.nombre} description={cplato.descripcion}/>
         ))}
         
         </div>
@@ -33,4 +33,4 @@ export async function getServerSideProps() {
     
   };
 
-export default Platos
+export default Platos;

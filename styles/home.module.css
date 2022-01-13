@@ -8,6 +8,7 @@
     font-size: 1.5em;
     display: flex;
 }
+
 .texts1 {
     text-align: center;
     margin-right: 31em;
@@ -18,17 +19,19 @@
     font-size: 1.5em;
     display: flex;
 }
-.title1{
+
+.title1 {
     text-align: center;
     font-family: "Rouge Script", cursive;
     font-size: 3.2rem;
 }
+
 .logo {
     display: contents;
     margin-bottom: 500px;
     padding-left: 200px;
     position: absolute;
-    justify-content:center;
+    justify-content: center;
 }
 
 .iz {
@@ -48,22 +51,25 @@
     padding-right: 100px;
     overflow: hidden;
 }
+
 .redirect_button {
     background-color: #e4802e;
     color: white;
-    padding: 0.5em 1em;
+    padding: 0.2em;
     border-radius: 0.5em 0.5em;
     margin-left: 3em;
     margin-right: 3em;
     font-family: "Rouge Script", cursive;
-    font-size: 2em;
+    font-size: xx-large;
     transition: all 0.25s;
+    margin-bottom: 5em;
 }
 
 .redirect_button :hover {
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
+
 .catalogo {
     width: 100%;
     max-width: 1200px;
@@ -90,6 +96,7 @@
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
+
 .catalogo .card image_container {
     width: 330px;
     height: 200px;

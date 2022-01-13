@@ -2,10 +2,12 @@ import React from "react";
 import Header from "../../components/Header/header";
 import Footer from "../../components/Footer/footer";
 import styles from "../../styles/catalogo.module.css";
+import { Card } from "../../components/Card/card";
+import stylesc from "../../styles/platos.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const Catalogue = () => {
+const Catalogue = ({cata}) => {
   return (
     <div>
       <Header />
@@ -15,117 +17,31 @@ const Catalogue = () => {
         vendidos de la provincia de Loja, deleitate con nuestra gatronomia que
         esta dividida por Categorías.
       </p>
-
-      <div className={styles.catalogo}>
-        <Link href="#">
-      <div className={styles.card}>
-        <Image
-          src="/images/sopa.png"
-          alt="Sopa"
-          width="330"
-          height="180"
-          className={styles.image_container}
-        />
-        <p className="ncatalogo">Sopas</p>
+      <div className={styles  .container}>
+        {cata.map(cata=>
+        (
+            <Card key={cata._id} id={cata._id} imagen={cata.imagen} nombre={cata.nombre} />
+        ))}
+        
         </div>
-        </Link>
-        <Link  href="/platos">
-        <div className={styles.card}>
-        <Image
-          src="/images/p_tipico.png"
-          alt="ptipico"
-          width="330"
-          height="180"
-          className={styles.image_container}
-        />
-           <p className="ncatalogo">Platos Tipicos</p>
-      
+        console 
 
-        </div>
-        </Link>
-        <div className={styles.card}>
-        <Image
-          src="/images/postre.png"
-          alt="ptipico"
-          width="330"
-          height="180"
-          className={styles.image_container}
-        />
-        <p className="ncatalogo">Postres</p>
-      </div>
-      <div className={styles.card}>
-        <Image
-          src="/images/vegetales.png"
-          alt="ptipico"
-          width="330"
-          height="180"
-          className={styles.image_container}
-        />
-        <p className="ncatalogo">Vegetariano</p>
-      </div>
-      
-      <div className={styles.card}>
-        <Image
-          src="/images/carnes.png"
-          alt="ptipico"
-          width="330"
-          height="180"
-          className={styles.image_container}
-        />
-         <p className="ncatalogo">Carnes</p>
-      </div>
-      <div className={styles.card}>
-        <Image
-          src="/images/pescado.png"
-          alt="ptipico"
-          width="330"
-          height="180"
-          className={styles.image_container}
-        />
-         <p className="ncatalogo">Pescados</p>
-      </div>
-      <div className={styles.card}>
-        <Image
-          src="/images/bebidas.jpg"
-          alt="ptipico"
-          width="330"
-          height="180"
-          className={styles.image_container}
-        />
-         <p className="ncatalogo">Bebidas</p>
-      </div>
-      <div className={styles.card}>
-        <Image
-          src="/images/licores.jpg"
-          alt="ptipico"
-          width="330"
-          height="180"
-          className={styles.image_container}
-        />
-         <p className="ncatalogo">Licores</p>
-      </div>
-      <div className={styles.card}>
-        <Image
-          src="/images/productos.jpg"
-          alt="ptipico"
-          width="330"
-          height="180"
-          className={styles.image_container}
-        />
-         <p className="ncatalogo">Productos</p>
-      </div>
-      </div>
-      <div
-        style={{ display: "flex", justifyContent: "center", marginTop: "30%" }}
-      >
-        <section className={styles.mascatalogo}>
-          <a href="#">Mas Catalgo</a>
-        </section>
-      </div>
+        { cata && JSON.stringify(cata)}
 
       <Footer />
     </div>
   );
+};
+export async function getServerSideProps() {
+  const res= await fetch('http://localhost:3000/api/catalogo')
+  const cata=await res.json()
+  return{
+    props:{
+      cata,
+
+    }
+  }
+  
 };
 
 export default Catalogue;

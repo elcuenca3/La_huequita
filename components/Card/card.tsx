@@ -4,7 +4,7 @@ import styles from './card.module.css'
 
 export const Card = ({nombre='', imagen='/images/carnes.png', description='', id=''}) => {
     return (
-        <Link href={`/platos/${id}`}>
+        <Link href={`/catalogo/${nombre}`}>
         <a>
         <div className={styles.card}>
             <h3>{nombre}</h3>

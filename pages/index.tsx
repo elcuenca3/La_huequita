@@ -51,14 +51,14 @@ const Home: NextPage = () => {
           <p className={styles.texts}>
             Junto al mejor catalogo de platos de toda la ciudad
           </p>
-          <Link href="/catalogue">
+          <Link href="/catalogo">
           <a className={styles.redirect_button}>Catalogo de Platos</a>
         </Link>
         </div>
       </div>
 
       <div
-        style={{ display: "flex", justifyContent: "center", marginTop: "27em" }}
+        style={{ display: "block", justifyContent: "center", marginTop: "35em" }}
       >
       </div>
       <h3 className={styles.title1}>¿No te decides Aún...? Aqui tenemos unas recomendaciones</h3>

@@ -29,11 +29,13 @@ const Header = () => {
             <a>Inicio</a>
         </li>
           </Link>
-        <li>
           <Link href="/catalogo">
+        <li>
+          
             <a>Catalogo</a>
-          </Link>
+          
         </li>
+        </Link>
         <li>
           <Link href="/huecas">
             <a>Huecas</a>

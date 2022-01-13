@@ -8,53 +8,8 @@
     font-size: 125%;
 }
 
-.catalogo {
-    width: 100%;
-    max-width: 1200px;
-    height: 430px;
+.container {
     display: flex;
+    justify-self: center;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
-}
-
-.catalogo .card {
-    width: 330px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(23, 6, 63, 0.548);
-    overflow: hidden;
-    margin: 20px;
-    text-align: center;
-    transition: all 0.25s;
-    background-color: rgba(255, 187, 97, 0.671);
-}
-
-.catalogo .card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-}
-
-.mascatalogo {
-    background-color: #ce901e;
-    color: white;
-    padding: 0.2em 0.6em;
-    border-radius: 0.5em;
-    margin-left: 3em;
-    margin-right: 3em;
-    font-family: "Rouge Script", cursive;
-    font-size: 2em;
-}
-
-.catalogo .card p {
-    font-family: "Rouge Script", cursive;
-    font-size: x-large;
-    font: oblique bold 120% cursive;
-    color: #6B1A1A;
-}
-
-.catalogo .card image_container {
-    width: 330px;
-    height: 200px;
-    border-radius: 15%;
 }

@@ -1,11 +1,13 @@
-.titulo{
+.titulo {
     text-align: center;
 }
-.slider{
-width: 80%;
-  background-color: white;
-  box-shadow: 0 4em 8em 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+.slider {
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 4em 8em 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .texts1 {
     text-align: center;
     font-family: "Rouge Script", cursive;
@@ -13,52 +15,62 @@ width: 80%;
     padding: 40px;
 }
 
-.menu .ingre{
-    margin: 0em 19em;  /*altura*/
+.menu .ingre {
+    margin: 0em 19em;
+    /*altura*/
     color: white;
     text-align: left;
 }
-.menu .huec{
-    margin: -13.5em 20.5em;  /*altura*/
+
+.menu .huec {
+    margin: -13.5em 20.5em;
+    /*altura*/
     color: rgb(255, 255, 255);
     justify-content: center;
     text-align: right;
 }
-.menu .prep{
-    margin: 25em 0em;  /*altura*/
+
+.menu .prep {
+    margin: 25em 0em;
+    /*altura*/
     color: white;
     text-align: center;
 }
+
 .texts {
     margin: -13em -3em;
     width: 50px;
-    text-align: left; 
+    text-align: left;
     border-radius: 10px 10px;
     background-color: rgb(238, 164, 94);
     padding: 140px;
 }
+
 .texts2 {
     margin: -13em 40em;
     width: 50px;
-    text-align: left; 
+    text-align: left;
     border-radius: 10px 10px;
     background-color: rgb(238, 164, 94);
     padding: 140px;
 }
+
 .texts3 {
     margin: -10em 13.8em;
     width: 67em;
-    text-align: left; 
+    text-align: left;
     border-radius: 40px 40px;
     background-color: rgb(238, 164, 94);
     padding: 120px;
 }
-.menu .titulo1{
+
+.menu .titulo1 {
     text-align: center;
     font-family: "Rouge Script", cursive;
     font-size: 3.5rem;
     padding: -10em;
 }
+
 .catalogo {
     width: 100%;
     max-width: 1200px;
@@ -85,6 +97,7 @@ width: 80%;
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
+
 .catalogo .card image_container {
     width: 330px;
     height: 200px;
