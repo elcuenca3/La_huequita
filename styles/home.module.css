@@ -2,7 +2,7 @@
     text-align: center;
     margin-right: 30px;
     border-radius: 20px 20px;
-    background-color: rgb(238, 164, 94);
+    background-color: rgb(224, 108, 0);
     padding: 50px;
     color: aliceblue;
     font-size: 1.5em;
@@ -13,7 +13,7 @@
     text-align: center;
     margin-right: 31em;
     border-radius: 20px 20px;
-    background-color: rgb(238, 164, 94);
+    background-color: rgb(224, 108, 0);
     padding: 50px;
     color: aliceblue;
     font-size: 1.5em;
@@ -33,7 +33,18 @@
     position: absolute;
     justify-content: center;
 }
-
+.menu{
+    padding: 0px -10px;
+    margin: 0px -15px;
+}
+.menu .iz .redirect_button{
+    padding: 0px 15px;
+    margin: 0px 120px;
+}
+.menu .de .redirect_button{
+    padding: 0px 15px;
+    margin: 0px 135px;
+}
 .iz {
     display: inline-table;
     float: left;

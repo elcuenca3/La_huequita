@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Header from "../components/Header/header";
+import Header from "../components/Header/headerinicio";
 import Image from "next/image";
 import styles from "../styles/home.module.css";
 import Link from "next/link";
@@ -9,33 +9,34 @@ const Home: NextPage = () => {
   return (
     <div>
       <Header />
-      <div style={{ justifyContent: "center"}}>
         <h1 className={styles.title}>Te damos la bienvenida a</h1>
         <div style={{ justifyContent: "center", display: "flex"}}>
           <Image
-            src="/images/logo1.png"
+            src="https://raw.githubusercontent.com/RommelOjeda/imagenes/main/sin-cadena.png"
             alt="Picture of the author"
-            width={473.5}
-            height={297}
+            width={760}
+            height={285}
             className={styles.logo}
           />
         </div>
-      </div>
+      <br></br>
+      <br></br>
+      
       <div className={styles.menu}>
         <div className={styles.iz}>
           <Image
             src="/images/resta.png"
             alt="Picture of the author"
-            width={400}
-            height={190}
+            width={500}
+            height={257}
             className={styles.ima}
           />
-
+      
           <p className={styles.texts1}>
             Con los mejores restaurantes y huecas de todo Loja
           </p>
           <Link href="/huecas">
-          <a className={styles.redirect_button}>Huecas y Restaurates</a>
+          <a className={styles.redirect_button}>Huecas y Restaurantes</a>
         </Link>
         </div>
 
@@ -43,8 +44,8 @@ const Home: NextPage = () => {
           <Image
             src="/images/platos.jpeg"
             alt="Picture of the author"
-            width={400}
-            height={190}
+            width={487}
+            height={265}
             className={styles.ima}
           />
 

@@ -8,7 +8,7 @@ const Footer = () => {
       <Image
         src="/images/fblogo.png"
         layout="fixed"
-        width="300"
+        width="260"
         height="100"
         alt=""
       />

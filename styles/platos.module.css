@@ -7,8 +7,31 @@
     text-align: center;
     margin: 20px;
     border-radius: 20px 20px;
-    background-color: rgb(238, 164, 94);
+    background-color: rgb(224, 108, 0);
     padding: 50px;
     color: rgb(255, 255, 255);
     font-size: 125%;
+}
+.ingre{
+    padding: 3px 5em;
+    background-color: rgb(255, 160, 71);
+    margin: 50px 55em 0px 140px; 
+    border-radius: 10px 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.huec{
+    padding: 3px 5em;
+    background-color: rgb(230, 142, 59);
+    margin: 30px 55em 0px 140px;
+    border-radius: 10px 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.prep{
+    padding: 3px 3em;
+    background-color: rgb(238, 115, 0);
+    margin: -353px 10em 0px 42em; 
+    border-radius: 10px 10px;   
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
