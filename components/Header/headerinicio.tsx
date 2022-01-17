@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import styles from "./header.module.css";
+import styles from "./headerinicio.module.css";
 import Image from "next/image";
 
 const Header = () => {
@@ -10,12 +10,12 @@ const Header = () => {
        <div className={styles.logo}>
       
       <Image
-            src="/images/logo1.png"
+            src="https://raw.githubusercontent.com/RommelOjeda/imagenes/main/verdadero.png"
             layout='fixed'
             alt="logo"
-            width="200"
-            height="120"
-            className={styles.logoa}
+            width="400"
+            height="65"
+            className={styles.logoa1}
           />
           </div>
           </Link>

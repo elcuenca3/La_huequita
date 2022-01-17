@@ -14,13 +14,13 @@ const PlatoPage = ({plato}) => {
       <Image
        src={plato.imagen}
        alt={plato.nombre}
-       width="575"
-       height="300"
+       width="675"
+       height="400"
        className={styles.slider}
        />
       </div>
 
-       <p className={styles.texts1}>{plato.historia}</p>
+       <p className={styles.texts1}>{plato.Historia}</p>
         <div className={styles.menu}>
           <div className={styles.ingre}>
             <h4>Ingredientes</h4>
@@ -30,7 +30,7 @@ const PlatoPage = ({plato}) => {
           <div className={styles.huec}>
           <h4>Donde Encontrarlo</h4> 
           {plato.huecas.map((huecas)=><li>
-            {huecas}<a href="#"> Visitar</a></li>)}
+            {huecas}<a href="#"> ---> Visitar</a></li>)}
           <p className={styles.texts2}/> 
           </div>
           <div className={styles.prep}>
@@ -38,15 +38,15 @@ const PlatoPage = ({plato}) => {
             {plato.preparacion.map((preparacion)=><li>{preparacion}</li>)}
             <p className={styles.texts3}/> 
           </div>
-         
+          <div
+        style={{ display: "flex", justifyContent: "center", marginTop: "16em" }}
+      ></div>
         </div>
         
         {/*
          { plato && JSON.stringify(plato)}
          */}
-         <div
-        style={{ display: "flex", justifyContent: "center", marginTop: "1em" }}
-      ></div>
+         
          <Footer />
           </div>)
 }
