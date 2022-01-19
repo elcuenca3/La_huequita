@@ -15,7 +15,6 @@ export default async(req:NextApiRequest, res:NextApiResponse) => {
         const plato = await Plato.find({categoria: ncat})
              
         //const plato = await Plato.find({nombre: {$eq: 'platotip'}})
-        console.log(catalogo.nombre) 
         if (!catalogo) return res.status(404).json({ msg: "no hay catalogo" })
         return res.status(200).json(plato)
     }

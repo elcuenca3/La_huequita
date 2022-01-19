@@ -1,11 +1,8 @@
 .container {
-    width: 100%;
-    max-width: 1400px;
-    height: 430px;
     display: flex;
+    justify-self: center;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
+    padding-left: 50px;
 }
 
 .titulo {
@@ -31,7 +28,7 @@
     margin: -430px 43.1em;
     width: 46em;
     border-radius: 10px 10px;
-    background-color: rgb(224, 108, 0);
+    background-color: rgb(255, 162, 74);
     padding: 230px 0px 238px;
 }
 
@@ -39,7 +36,7 @@
     text-align: center;
     margin: 60px;
     border-radius: 20px 20px;
-    background-color: rgb(224, 108, 0);
+    background-color: rgb(255, 162, 74);
     padding: 60px;
     color: rgb(255, 255, 255);
     font-size: 140%;

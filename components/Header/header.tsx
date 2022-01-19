@@ -41,6 +41,13 @@ const Header = () => {
           
         </li>
         </Link>
+        <Link href="/platos">
+        <li>
+          
+            <a>Platos</a>
+          
+        </li>
+        </Link>
         <Link href="/contacto">
         <li>
           
@@ -48,13 +55,7 @@ const Header = () => {
           
         </li>
         </Link>
-        <Link href="/formulario">
-        <li>
-          
-            <a>Formulario</a>
-          
-        </li>
-        </Link>
+        
       </ul>
       <div className={styles.header1}>
                 <img

@@ -28,6 +28,7 @@ export default async function platos(req, res) {
 
             }
 
+
         default:
             return res.status(400).json({ msg: "no es el metodo" });
 

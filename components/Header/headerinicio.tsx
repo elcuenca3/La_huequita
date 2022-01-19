@@ -1,4 +1,4 @@
-import Link from "next/link";
+  import Link from "next/link";
 import React from "react";
 import styles from "./headerinicio.module.css";
 import Image from "next/image";
@@ -14,7 +14,7 @@ const Header = () => {
             layout='fixed'
             alt="logo"
             width="400"
-            height="65"
+            height="60"
             className={styles.logoa1}
           />
           </div>
@@ -41,6 +41,14 @@ const Header = () => {
           
         </li>
         </Link>
+        <Link href="/platos">
+        <li>
+          
+            <a>Platos</a>
+          
+        </li>
+        
+        </Link>
         <Link href="/contacto">
         <li>
           
@@ -48,13 +56,7 @@ const Header = () => {
           
         </li>
         </Link>
-        <Link href="/formulario">
-        <li>
-          
-            <a>Formulario</a>
-          
-        </li>
-        </Link>
+        
       </ul>
       <div className={styles.header1}>
                 <img

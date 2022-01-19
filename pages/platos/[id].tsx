@@ -20,7 +20,7 @@ const PlatoPage = ({plato}) => {
        />
       </div>
 
-       <p className={styles.texts1}>{plato.Historia}</p>
+       <p className={styles.texts1}>{plato.historia}</p>
         <div className={styles.menu}>
           <div className={styles.ingre}>
             <h4>Ingredientes</h4>

@@ -1,11 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Card, CardPlato } from "../../components/Card/card";
+import { useRouter } from "next/router";
+import { CardPlato } from "../../components/Card/card";
 import Footer from "../../components/Footer/footer"
 import Header from "../../components/Header/header"
 import styles from "../../styles/platos.module.css";
 
 const Platos = ({cplato})=> {
+  const router = useRouter();
 
     return(  <div>
         <Header />
@@ -14,8 +16,8 @@ const Platos = ({cplato})=> {
         (
             <CardPlato key={cplato._id} id={cplato._id} imagen={cplato.imagen} nombre={cplato.nombre} description={cplato.descripcion}/>
         ))}
-        
         </div>
+     
         <Footer />
       </div>)
 }
