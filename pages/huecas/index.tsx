@@ -3,6 +3,8 @@ import Header from "../../components/Header/header";
 import Footer from "../../components/Footer/footer";
 import styles from "../../styles/huecas.module.css";
 import { CardHueca } from "../../components/Card/card";
+import Link from "next/link";
+
 
 
 
@@ -10,7 +12,11 @@ const Huecas = ({huec}) => {
   return (
     <div>
       <Header />
+
       <h1>Huecas</h1>
+      <Link href="/huecas/newHueca"> 
+      <a className={styles.boton}>Agregar</a>
+      </Link>
       <p className={styles.texts1}>
         En esta seccion encontraras las huecas y restaurantes más conocidos y
         que mas venden productos de la provincia de Loja
@@ -19,8 +25,10 @@ const Huecas = ({huec}) => {
         {huec.map(huec  =>
         (
             <CardHueca key={huec._id} id={huec._id} imagen={huec.imagen} nombre={huec.nombre} description={huec.descripcion}/>
-        ))}       
+        ))}     
+          
         </div>
+        
       <Footer />
     </div>
   )

@@ -11,7 +11,11 @@ const Catalogue = ({cata}) => {
   return (
     <div>
       <Header />
+      
       <h1 className={styles.title}>Catalogo</h1>
+      <Link href="/catalogo/newCatalogo"> 
+      <a className={styles.boton}>Agregar</a>
+      </Link>
       <p className={styles.text}>
         En esta seccion encontraras los platos tipicos mas conocidos y más
         vendidos de la provincia de Loja, deleitate con nuestra gatronomia que

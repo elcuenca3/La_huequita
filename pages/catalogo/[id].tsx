@@ -4,10 +4,30 @@ import Image from "next/image"
 import styles from "../../styles/id.module.css";
 import Link from "next/link"
 import { CardPlato } from "../../components/Card/card";
+import { useState } from "react";
+import router from "next/router";
 const PlatoPage = ({catal}) => {
+  const [message, setMessage] = useState("");
+  const handleDelete = async () => {
+    const caregoriaId = router.query.id;
+    try {
+      await fetch(`/api/categoria/busqueda`, {
+        method: "DELETE",
+      });
+      router.push("/");
+    } catch (error) {
+      setMessage("Error al eliminar");
+    }
+  };
 
   return(  <div>
     <Header />
+    <button className="btn btn-danger" onClick={handleDelete}>
+            Eliminar
+          </button>
+          {message && <p>{message}</p>}
+      
+    
     <div className={styles.container}>
     {catal.map(catal=>
     (

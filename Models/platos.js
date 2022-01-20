@@ -67,7 +67,16 @@ const platos = new Schema({
 
 
 
+    },
+    calorias: {
+        type: String,
+        required: [true, 'requiere calorias'],
+        default: "Desconocido",
+        unique: false,
+        trim: true,
+        maxlength: [50, 'title require']
     }
+
 }, {
     timetamps: true,
     versionkey: false

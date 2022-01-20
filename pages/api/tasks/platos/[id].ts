@@ -19,10 +19,34 @@ export default async(req:NextApiRequest, res:NextApiResponse) => {
         const actualizaPlato = await Plato.findByIdAndUpdate(id,req.body,{new:true,runValidators:true});
     }if(!actualizaPlato){
         return res.status(400).json({ success: false });
+        res.status(200).json({ success: true, data: actualizaPlato});
     }
-    res.status(200).json({ success: true, data: actualizaPlato});
+  
+if(req.method=='DELETE'){
+    try {
+        const deletePlato = await Plato.deleteOne({ _id: id });
+        if (!deletePlato) {
+          return res.status(400).json({ success: false });
+        }
+        res.status(200).json({ success: true, data: {} });
+      } catch (error) {
+        res.status(400).json({ success: false });
+      }
+}
+
 }catch(error){
     res.status(400).json({ success: false });
 
+}
+if(req.method=='DELETE'){
+    try {
+        const deletePlato = await Plato.deleteOne({ _id: id });
+        if (!deletePlato) {
+          return res.status(400).json({ success: false });
+        }
+        res.status(200).json({ success: true, data: {} });
+      } catch (error) {
+        res.status(400).json({ success: false });
+      }
 }
 }

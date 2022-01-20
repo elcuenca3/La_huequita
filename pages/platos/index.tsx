@@ -11,6 +11,10 @@ const Platos = ({cplato})=> {
 
     return(  <div>
         <Header />
+        <h1>Catalogo de platos</h1>
+        <Link href="/platos/newPlatos"> 
+      <a className={styles.boton}>Agregar</a>
+      </Link>
         <div className={styles.container}>
         {cplato.map(cplato=>
         (

@@ -8,6 +8,14 @@ export default async function catalogo(req, res) {
     const { method, body } = req;
 
     switch (method) {
+
+        case "POST":
+
+
+            const cate = new Catalogo(body)
+            await cate.save();
+            return res.status(200).json({ msg: "entro", success: true, cate })
+
         case "GET":
             try {
                 const catalogos = await Catalogo.find();
@@ -17,20 +25,6 @@ export default async function catalogo(req, res) {
                 return res.status(500).json({ error: error.message });
 
             }
-        case "POST":
-            try {
-
-                const cate = new Catalogo(body)
-                await cate.save();
-
-                return res.status(200).json({ msg: "entro", success: true, cate })
-            } catch (error) {
-                console.log("no guardo")
-                return res.status(400).json({ success: false, error });
-
-
-            }
-
 
         default:
             return res.status(400).json({ msg: "no es el metodo" });

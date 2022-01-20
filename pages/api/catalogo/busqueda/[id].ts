@@ -18,5 +18,17 @@ export default async(req:NextApiRequest, res:NextApiResponse) => {
         if (!catalogo) return res.status(404).json({ msg: "no hay catalogo" })
         return res.status(200).json(plato)
     }
+    if(req.method=='DELETE'){
+        try {
+            console.log("entro")
+            const deletePlato = await Plato.deleteOne({ id });
+            if (!deletePlato) {
+              return res.status(400).json({ success: false });
+            }
+            res.status(200).json({ success: true, data: {} });
+          } catch (error) {
+            res.status(400).json({ success: false });
+          }
+    }
 }
 

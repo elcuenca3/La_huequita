@@ -3,24 +3,45 @@ import Footer from "../../components/Footer/footer";
 import Image from "next/image"
 import styles from "../../styles/platos.module.css";
 import Link from "next/link"
+import { useState } from "react";
+import router from "next/router";
 const PlatoPage = ({plato}) => {
+  const [message, setMessage] = useState("");
+  const handleDelete = async () => {
+    const platoId = router.query.id;
+    try {
+      await fetch(`/api/tasks/platos/${platoId}`, {
+        method: "DELETE",
+      });
+      router.push("/");
+    } catch (error) {
+      setMessage("Error al eliminar");
+    }
+  };
+
 
     return (<div> 
  
       <Header />
+      <button className="btn btn-danger" onClick={handleDelete}>
+            Eliminar
+          </button>
+          {message && <p>{message}</p>}
+      
         <h1 className={styles.titulo}>{plato.nombre}</h1>
         <br></br>
-      <div style={{ justifyContent: "center", display: "flex"}}>
+      <div style={{ justifyContent: "center", display: "flex",paddingBottom:"50px",paddingTop:"25px"}}>
       <Image
        src={plato.imagen}
        alt={plato.nombre}
        width="675"
-       height="400"
+       height="350"
        className={styles.slider}
        />
       </div>
+     
 
-       <p className={styles.texts1}>{plato.historia}</p>
+       <p className={styles.historia}>{plato.historia}</p>
         <div className={styles.menu}>
           <div className={styles.ingre}>
             <h4>Ingredientes</h4>
@@ -30,7 +51,7 @@ const PlatoPage = ({plato}) => {
           <div className={styles.huec}>
           <h4>Donde Encontrarlo</h4> 
           {plato.huecas.map((huecas)=><li>
-            {huecas}<a href="#"> ---> Visitar</a></li>)}
+            {huecas}<a href={`http://localhost:3000/api/hueca/${huecas}`}> ---> Visitar</a></li>)}
           <p className={styles.texts2}/> 
           </div>
           <div className={styles.prep}>
