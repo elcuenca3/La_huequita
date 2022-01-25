@@ -21,6 +21,7 @@ const Platos = ({cplato})=> {
             <CardPlato key={cplato._id} id={cplato._id} imagen={cplato.imagen} nombre={cplato.nombre} description={cplato.descripcion}/>
         ))}
         </div>
+ 
      
         <Footer />
       </div>)

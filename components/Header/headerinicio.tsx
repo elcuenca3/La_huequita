@@ -56,6 +56,13 @@ const Header = () => {
           
         </li>
         </Link>
+        <Link href="/login">
+        <li>
+          
+            <a>Login</a>
+          
+        </li>
+        </Link>
         
       </ul>
       <div className={styles.header1}>
