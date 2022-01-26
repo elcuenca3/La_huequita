@@ -12,16 +12,18 @@ const Platos = ({cplato})=> {
     return(  <div>
         <Header />
         <h1>Catalogo de platos</h1>
-        <Link href="/platos/newPlatos"> 
-      <a className={styles.boton}>Agregar</a>
-      </Link>
+      
         <div className={styles.container}>
         {cplato.map(cplato=>
         (
             <CardPlato key={cplato._id} id={cplato._id} imagen={cplato.imagen} nombre={cplato.nombre} description={cplato.descripcion}/>
         ))}
         </div>
- 
+        <div style={{display:"flex" , justifyContent:"center",padding:"40px"}}>
+        <Link href="/platos/newPlatos"> 
+      <a className={styles.boton}>Agregar</a>
+      </Link>
+      </div>
      
         <Footer />
       </div>)

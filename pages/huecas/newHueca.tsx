@@ -123,7 +123,7 @@ const New = () => {
             value = { form.ubicacion }
             onChange = { handleChanege }
             />
-             <button type = "submit" > Guardar </button> 
+             <button type = "submit" onClick={postData} > Guardar </button> 
              {
                  
             message.map(({ message }) => ( < p key = { message } > { message } </p>))}

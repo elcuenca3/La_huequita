@@ -192,7 +192,7 @@ const New = () => {
           ))}
         </form>
       </div>
-      <fireUP/>
+
 
       <Footer />
     </div>

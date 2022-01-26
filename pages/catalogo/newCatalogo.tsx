@@ -39,7 +39,7 @@ const New = () => {
       });
       const data = await res.json;
       console.log(data);
-
+      router.push("/catalogo");
       if (!data.success) {
         for (const key in data.error.errors) {
           let error = data.error.errors[key];
@@ -83,7 +83,7 @@ const New = () => {
             accept="image/*"
             onChange={handleChanege}
           />
-          <button type="submit"> Guardar </button>
+          <button type="submit" onClick={postData}> Guardar </button>
           {message.map(({ message }) => (
             <p key={message}> {message} </p>
           ))}
