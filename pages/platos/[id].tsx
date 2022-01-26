@@ -51,7 +51,7 @@ const PlatoPage = ({plato}) => {
           <div className={styles.huec}>
           <h4>Donde Encontrarlo</h4> 
           {plato.huecas.map((huecas)=><li>
-            {huecas}<a href={`http://localhost:3000/api/hueca/${huecas}`}> ---> Visitar</a></li>)}
+            {huecas}<a href={`http://localhost:3000/hueca/${huecas}`}> ---> Visitar</a></li>)}
           <p className={styles.texts2}/> 
           </div>
           <div className={styles.prep}>

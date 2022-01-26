@@ -57,7 +57,6 @@ const New = () => {
 
                     }
 
-                    router.push('/huecas');
                 }
                 router.push('/huecas');
 

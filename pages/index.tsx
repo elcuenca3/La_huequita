@@ -6,6 +6,7 @@ import Link from "next/link";
 import Footer from "../components/Footer/footer";
 
 const Home: NextPage = () => {
+  
   return (
     <div>
       <Header />

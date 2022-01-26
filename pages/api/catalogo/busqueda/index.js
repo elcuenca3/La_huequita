@@ -31,7 +31,7 @@ export default async(req, res) => {
         case "DELETE":
             try {
                 console.log("entro")
-                const deletePlato = await Plato.deleteOne({ _id: id });
+                const deletePlato = await Catalogo.deleteOne({ _id: id });
                 if (!deletePlato) {
                     return res.status(400).json({ success: false });
                 }

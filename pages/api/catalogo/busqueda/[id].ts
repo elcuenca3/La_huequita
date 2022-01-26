@@ -7,7 +7,7 @@ import Plato from '../../../../Models/platos';
 dbConect();
 
 export default async(req:NextApiRequest, res:NextApiResponse) => {
-    console.log('Obteneindo')
+    console.log('Obteneindo catalo')
     const { id ,categoria  } = req.query
     if(req.method == 'GET'){
         const catalogo = await Catalogo.findById(id)
@@ -19,14 +19,16 @@ export default async(req:NextApiRequest, res:NextApiResponse) => {
         return res.status(200).json(plato)
     }
     if(req.method=='DELETE'){
+      console.log("quiere borrar")
         try {
-            console.log("entro")
-            const deletePlato = await Plato.deleteOne({ id });
+            console.log("borro")
+            const deletePlato = await Catalogo.deleteOne({ _id: id });
             if (!deletePlato) {
               return res.status(400).json({ success: false });
             }
             res.status(200).json({ success: true, data: {} });
           } catch (error) {
+            console.log("fallo")
             res.status(400).json({ success: false });
           }
     }

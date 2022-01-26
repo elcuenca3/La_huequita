@@ -10,12 +10,14 @@ const PlatoPage = ({catal}) => {
   const [message, setMessage] = useState("");
   const handleDelete = async () => {
     const caregoriaId = router.query.id;
+    console.log(caregoriaId)
     try {
-      await fetch(`/api/categoria/busqueda`, {
+      await fetch(`/api/categoria/busqueda/${caregoriaId}`, {
         method: "DELETE",
       });
-      router.push("/");
+      router.push("/catalogo");
     } catch (error) {
+      console.log(caregoriaId)
       setMessage("Error al eliminar");
     }
   };

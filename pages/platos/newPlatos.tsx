@@ -61,10 +61,12 @@ const New = () => {
           setMessage((oldMessage) => [
             ...oldMessage,
             { message: error.message },
+            
           ]);
+
         }
 
-        router.push("/catalogo");
+        router.push("/platos");
       }
     } catch (error) {
       console.log(error);
@@ -184,12 +186,13 @@ const New = () => {
             value={form.calorias}
             onChange={handleChanege}
           />
-          <button type="submit" > Guardar </button>
+          <button className={style.boton} onClick={postData} type="submit" > Guardar </button>
           {message.map(({ message }) => (
             <p key={message}> {message} </p>
           ))}
         </form>
       </div>
+      <fireUP/>
 
       <Footer />
     </div>

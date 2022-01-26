@@ -22,6 +22,16 @@ export default async(req, res) => {
 
 
         case "PUT":
+            try {
+                const putPato = await Plato.findByIdAndUpdate(id, body, {
+                    new: true,
+                    runValidators: true,
+                });
+                if (!putPato) return res.status(404).json({ msg: "Pato does not exists" });
+                return res.status(200).json(putPato);
+            } catch (error) {
+                return res.status(400).json({ msg: error.message });
+            }
 
         case "DELETE":
         default:

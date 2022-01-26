@@ -16,4 +16,5 @@ export default async(req:NextApiRequest, res:NextApiResponse) => {
         if (!huecas) return res.status(404).json({ msg: "no hay huecas" })
         return res.status(200).json(huecas)
     }
+    
 }
