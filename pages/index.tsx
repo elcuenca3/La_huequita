@@ -23,7 +23,7 @@ const Home: NextPage = ({ cata }) => {
           src="https://raw.githubusercontent.com/RommelOjeda/imagenes/main/sin-cadena.png"
           alt="Picture of the author"
           width={608}
-          height={173}
+          height={190}
           className={styles.logo}
         />
       </div>
@@ -55,7 +55,7 @@ const Home: NextPage = ({ cata }) => {
             src="/images/platos.jpeg"
             alt="Picture of the author"
             width={500}
-            height={257}
+            height={258}
             className={styles.ima}
           />
 
@@ -71,7 +71,7 @@ const Home: NextPage = ({ cata }) => {
 
       </div>
       <div className={styles.descrip}>
-      <h2>no te decidiste aun.... aqui tenemos unas recomendaciones </h2>
+      <h2>No te decidiste aun...? Aquí tenemos unas Recomendaciones </h2>
       </div>
       <div style={{display:"flex",padding:"20px" }}>
       {cata.map(cata=>

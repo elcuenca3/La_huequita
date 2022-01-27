@@ -14,9 +14,6 @@ const Huecas = ({huec}) => {
       <Header />
 
       <h1>Huecas</h1>
-      <Link href="/huecas/newHueca"> 
-      <a className={styles.boton}>Agregar</a>
-      </Link>
       <p className={styles.texts1}>
         En esta seccion encontraras las huecas y restaurantes más conocidos y
         que mas venden productos de la provincia de Loja
@@ -26,9 +23,12 @@ const Huecas = ({huec}) => {
         (
             <CardHueca key={huec._id} id={huec._id} imagen={huec.imagen} nombre={huec.nombre} description={huec.descripcion}/>
         ))}     
-          
         </div>
-        
+      <div style={{display:"flex" , justifyContent:"center",padding:"40px"}}>
+        <Link href="/huecas/newHueca"> 
+      <a className={styles.boton}>Agregar</a>
+      </Link>
+      </div>
       <Footer />
     </div>
   )

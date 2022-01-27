@@ -23,14 +23,14 @@ const PlatoPage = ({plato}) => {
     return (<div> 
  
       <Header />
-      <button className={styles.boton} onClick={handleDelete}>
+      <button className={styles.boton1} onClick={handleDelete}>
             Eliminar
           </button>
           {message && <p>{message}</p>}
       
         <h1 className={styles.titulo}>{plato.nombre}</h1>
         <br></br>
-      <div style={{ justifyContent: "center", display: "flex",paddingBottom:"50px",paddingTop:"25px"}}>
+      <div style={{ justifyContent: "left", display: "flex",paddingBottom:"50px",paddingTop:"30px",paddingLeft:"50px"}}>
       <Image
        src={plato.imagen}
        alt={plato.nombre}
@@ -60,7 +60,7 @@ const PlatoPage = ({plato}) => {
             <p className={styles.texts3}/> 
           </div>
           <div
-        style={{ display: "flex", justifyContent: "center", marginTop: "16em" }}
+        style={{ display: "flex", justifyContent: "center", marginTop: "4.3em" }}
       ></div>
         </div>
         
