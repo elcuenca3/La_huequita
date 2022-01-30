@@ -37,10 +37,10 @@ const Contacto = () => {
             </div>
 
             <form action="" method="GET" className={styles.formulario}>
-                <input type={"text"} name="nombre" placeholder="Nombre" id="nombre"/>
-                <input type={"text"} name="correo" placeholder="Correo Electronico" id="correo"/>
-                <input type={"text"} name="asunto" placeholder="Asunto" id="asunto"/>
-                <textarea name="mensaje" id="mensaje" placeholder="Mensaje"></textarea>
+                <input   autoComplete="off" type={"text"} name="nombre" placeholder="Nombre" id="nombre"/>
+                <input  autoComplete="off" type={"text"} name="correo" placeholder="Correo Electronico" id="correo"/>
+                <input  autoComplete="off" type={"text"} name="asunto" placeholder="Asunto" id="asunto"/>
+                <textarea  autoComplete="off" name="mensaje" id="mensaje" placeholder="Mensaje"></textarea>
                 <button type="button">Enviar</button>
             </form>
 

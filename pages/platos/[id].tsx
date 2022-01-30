@@ -5,7 +5,9 @@ import styles from "../../styles/platos.module.css";
 import Link from "next/link"
 import { useState } from "react";
 import router from "next/router";
-const PlatoPage = ({plato}) => {
+
+const PlatoPage = ({plato}:any) => {
+
   const [message, setMessage] = useState("");
   const handleDelete = async () => {
     const platoId = router.query.id;
@@ -30,7 +32,7 @@ const PlatoPage = ({plato}) => {
       
         <h1 className={styles.titulo}>{plato.nombre}</h1>
         <br></br>
-      <div style={{ justifyContent: "left", display: "flex",paddingBottom:"50px",paddingTop:"30px",paddingLeft:"50px"}}>
+      <div style={{ justifyContent: "left", display: "flex",paddingBottom:"50px",paddingTop:"200px",paddingLeft:"50px"}}>
       <Image
        src={plato.imagen}
        alt={plato.nombre}
@@ -40,23 +42,23 @@ const PlatoPage = ({plato}) => {
        />
       </div>
      
-
-       <p className={styles.historia}>{plato.historia}</p>
+      
+       <p className={styles.historia}><h4 style={{fontFamily:"Rouge Script",fontSize:"40px",padding:"auto" }}>Hitoria</h4>{plato.historia}</p>
         <div className={styles.menu}>
           <div className={styles.ingre}>
             <h4>Ingredientes</h4>
-            {plato.ingredientes.map((ingrediente)=><li>{ingrediente}</li>)}
+            {plato.ingredientes.map((ingrediente:any)=><li>{ingrediente}</li>)}
             <p className={styles.texts}/> 
           </div>
           <div className={styles.huec}>
           <h4>Donde Encontrarlo</h4> 
-          {plato.huecas.map((huecas)=><li className={styles.ubicacion}>
-            {huecas}<a href={`http://localhost:3000/hueca/${huecas}`} className={styles.ubi}>Visitar</a></li>)}
+          {plato.huecas.map((huecas:any)=><li className={styles.ubicacion}>
+            {huecas}<a  href={`https://www.google.com.ec/maps/search/${huecas}`} className={styles.ubi}>Visitar</a></li>)}
           <p className={styles.texts2}/> 
           </div>
           <div className={styles.prep}>
           <h4>Preparacion</h4> 
-            {plato.preparacion.map((preparacion)=><li>{preparacion}</li>)}
+            {plato.preparacion.map((preparacion:any)=><li>{preparacion}</li>)}
             <p className={styles.texts3}/> 
           </div>
           <div

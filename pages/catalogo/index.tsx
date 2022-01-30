@@ -18,7 +18,7 @@ const Catalogue = ({cata}) => {
         vendidos de la provincia de Loja, deleitate con nuestra gatronomia que
         esta dividida por Categorías.
       </p>
-      <div className={styles  .container}>
+      <div className={styles.container}>
         {cata.map(cata=>
         (
             <CardCata key={cata._id} id={cata._id} imagen={cata.imagen} nombre={cata.nombre} />

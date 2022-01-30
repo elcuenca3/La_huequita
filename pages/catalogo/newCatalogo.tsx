@@ -11,6 +11,22 @@ const New = () => {
     imagen: "",
   });
 
+  function previewFile() {
+    var preview = document.querySelector('img');
+    var file    = document.querySelector('input[type=file]').files[0];
+    var reader  = new FileReader();
+  
+    reader.onloadend = function () {
+      preview.src = reader.result;
+    }
+  
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      preview.src = "";
+    }
+  }
+
   const [message, setMessage] = useState([]);
 
   const handleChanege = (e) => {
@@ -61,7 +77,7 @@ const New = () => {
       <Header />
       <h1> Formulario Catalogo </h1>
       <div className={style.container}>
-        <form onSubmit={handleSubmit} enctype="multipart/form-data">
+        <form onSubmit={handleSubmit} encType="multipart/form-data">
           <p>Nombre de la categoria:</p>
           <input
             autoComplete="off"
@@ -77,13 +93,14 @@ const New = () => {
             autoComplete="off"
             name="imagen"
             className={style.box}
-            type="text"
+            type="file"
             placeholder="Ingrese la url de la Imagen "
             value={form.imagen}
+            defaultValue="https://raw.githubusercontent.com/RommelOjeda/imagenes/main/Catalogo/bebidas.jpg"
             accept="image/*"
             onChange={handleChanege}
           />
-          <button type="submit" onClick={postData}> Guardar </button>
+          <button className={style.boton} type="submit" onClick={postData}> Guardar </button>
           {message.map(({ message }) => (
             <p key={message}> {message} </p>
           ))}

@@ -66,7 +66,7 @@ const New = () => {
         }
         return ( < div >
             <Header/>
-            <h1> Formulario Catalogo </h1> 
+            <h1> Formulario Huecas </h1> 
              <div className = { style.container } >
             <form onSubmit = { handleSubmit } >
             <p >Nombre de la hueca:</p>
@@ -78,11 +78,11 @@ const New = () => {
             value = { form.nombre }
             onChange = { handleChanege }
             />  
-            <p >URL el logo :</p>
+            <p >Imagen del logo :</p>
             <input autoComplete = "off"
             name = "logo"
             className = { style.box }
-            type = "text"
+            type = "file"
             placeholder = "Ingrese la url de la Imagen "
             value = { form.logo }
             onChange = { handleChanege }
@@ -91,7 +91,7 @@ const New = () => {
             <input autoComplete = "off"
             name = "imagen"
             className = { style.box }
-            type = "text"
+            type = "file"
             placeholder = "Ingrese la url de la Imagen "
             value = { form.imagen }
             onChange = { handleChanege }
@@ -123,7 +123,7 @@ const New = () => {
             value = { form.ubicacion }
             onChange = { handleChanege }
             />
-             <button type = "submit" onClick={postData} > Guardar </button> 
+             <button className={style.boton} type = "submit" onClick={postData} > Guardar </button> 
              {
                  
             message.map(({ message }) => ( < p key = { message } > { message } </p>))}
