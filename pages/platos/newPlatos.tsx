@@ -17,6 +17,7 @@ const New = () => {
     lugar: "",
     huecas: [],
     calorias: "",
+    file: null
   });
 
   const [message, setMessage] = useState([]);
@@ -45,17 +46,30 @@ const New = () => {
     try {
       console.log(form);
 
+      const formData = new FormData();
+
+      for(const name in form){
+        formData.append(name, form[name])
+      }
+      
       const res = await fetch("/api/tasks", {
+        method: "POST",
+        body: formData,
+      });
+      const data:any = await res.json;
+      console.log(data);
+
+      /* const res = await fetch("/api/tasks", {
         method: "POST",
         headers: {
           "Content-type": "application/json",   
         },
         body: JSON.stringify(form),
       });
-      const data = await res.json;
-      console.log(data);
+      const data:any = await res.json;
+      console.log(data); */
 
-      if (!data.success) {
+     /*  if (!data.success) {
         for (const key in data.error.errors) {
           let error = data.error.errors[key];
           setMessage((oldMessage) => [
@@ -65,18 +79,27 @@ const New = () => {
         }
 
         router.push("/platos");
-      }
+      } */
     } catch (error) {
       console.log(error);
       console.log("hola");
     }
   };
+
+  const handleFileChanges = (e) => {
+    const file = e.target.files.item(0)
+    if(file){
+      setForm({...form, file})
+    }
+
+  }
+
   return (
     <div>
       <Header />
       <h1> Formulario Catalogo </h1>
       <div className={style.container}>
-        <form onSubmit={handleSubmit} acceptCharset="UTF-8" enctype="multipart/form-data">
+        <form onSubmit={handleSubmit} acceptCharset="UTF-8" encType="multipart/form-data">
           <p>Nombre del plato:</p>
           <input
             autoComplete="off"
@@ -88,6 +111,8 @@ const New = () => {
             onChange={handleChanege}
           />
           <p>URL de la imagen del plato:</p>
+
+          <input type="file" accept="image/*" onChange={handleFileChanges} />
 
           <input
             autoComplete="off"

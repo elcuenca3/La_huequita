@@ -2,6 +2,6 @@
 module.exports = {
     eactStrictMode: true,
     images: {
-        domains: ["raw.githubusercontent.com", "lh3.googleusercontent.com", "http://localhost:3000/"],
+        domains: ["raw.githubusercontent.com", "lh3.googleusercontent.com", "http://localhost:3000/", ""],
     },
 };
