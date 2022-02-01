@@ -47,9 +47,9 @@ const PlatoPage = ({plato}:any) => {
     <Image
        src={plato.imagen}
        alt={plato.nombre}
-       width="675"
+       width="750"
        height="350"
-       className={styles.img}
+       className={styles.img} 
        />
      
       <div className={styles.page}>

@@ -154,7 +154,6 @@ const New = () => {
             value={form.categoria}
             onChange={handleChanege}
           />
-          <button type="submit">+</button>
 
           <p>Historia del plato:</p>
 
