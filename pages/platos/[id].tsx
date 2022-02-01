@@ -15,7 +15,10 @@ const PlatoPage = ({plato}:any) => {
       await fetch(`/api/tasks/platos/${platoId}`, {
         method: "DELETE",
       });
-      router.push("/");
+      await fetch(`/api/tasks/platos/${platoId}`, {
+        method: "PULL",
+      });
+      router.push("/platos");
     } catch (error) {
       setMessage("Error al eliminar");
     }
@@ -32,18 +35,25 @@ const PlatoPage = ({plato}:any) => {
       
         <h1 className={styles.titulo}>{plato.nombre}</h1>
         <br></br>
-      <div style={{ justifyContent: "left", display: "flex",paddingBottom:"50px",paddingTop:"200px",paddingLeft:"50px"}}>
+      {/*<div style={{  justifyContent: "left", display: "flex",paddingBottom:"250px",paddingLeft:"1px",position:"relative"}}>
       <Image
        src={plato.imagen}
        alt={plato.nombre}
        width="675"
        height="350"
-       className={styles.slider}
+       className={styles.img}
        />
-      </div>
+    </div>*/}
+    <Image
+       src={plato.imagen}
+       alt={plato.nombre}
+       width="675"
+       height="350"
+       className={styles.img}
+       />
      
-      
-       <p className={styles.historia}><h4 style={{fontFamily:"Rouge Script",fontSize:"40px",padding:"auto" }}>Hitoria</h4>{plato.historia}</p>
+      <div className={styles.page}>
+       <p className={styles.historia}><h4 style={{fontFamily:"Rouge Script",fontSize:"40px" }}>Hitoria</h4>{plato.historia}</p>
         <div className={styles.menu}>
           <div className={styles.ingre}>
             <h4>Ingredientes</h4>
@@ -69,6 +79,7 @@ const PlatoPage = ({plato}:any) => {
         {/*
          { plato && JSON.stringify(plato)}
          */}
+         </div>
          
          <Footer />
           </div>)

@@ -140,8 +140,10 @@ const New = () => {
           />
           <p>Selecione una images:</p>
 
-          <input type="file" accept="image/*" onChange={handleFileChanges} />
+          <input  type="file" accept="image/*" onChange={handleFileChanges} />
           <p>La categoria del plato:</p>
+          
+          <img></img>
 
           <input
             autoComplete="off"

@@ -11,6 +11,7 @@
 }
 
 .imagenes .image {
+    object-fit: contain;
     margin: -140px 1em;
     /*altura*/
     text-align: left;
@@ -20,6 +21,7 @@
 }
 
 .imagenes .image1 {
+    object-fit: contain;
     margin: -28em 7em;
     text-align: right;
 }

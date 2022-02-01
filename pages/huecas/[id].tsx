@@ -33,12 +33,14 @@ const HuecasPage = ({hueca}) => {
           <p className={styles.texts}/> 
         <p className={styles.histo}>{hueca.historia}</p> 
         </div>
-        <h3 className={styles.titulo1}>Ubicación</h3>
-        <p className={styles.ubica}>{hueca.ubicacion}</p> 
+        <h3  className={styles.titulo1}>Ubicación</h3>
+        <p  className={styles.ubica}>{hueca.ubicacion}</p> 
+
 
         <div
         style={{ display: "flex", justifyContent: "center", marginTop: "-25em" }}
-      ></div>
+        
+      ><a  href={`https://www.google.com.ec/maps/search/${hueca.ubicacion}`} className={styles.boton}> ir </a></div>
       
          <Footer />
           </div>)

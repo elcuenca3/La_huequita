@@ -43,14 +43,26 @@
     color: rgb(0, 0, 0);
 }
 
-.ingredientsContainer{
+.ingredientsContainer {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
 }
 
-.addButton{
+.addButton {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    border: none;
+    color: white;
+    background-color: #d18a38;
     margin-left: 1em;
     min-width: 15%;
-    height: 30px; 
+    height: 30px;
+    cursor: pointer;
+}
+
+.addButton:hover {
+    justify-content: center;
+    background-color: #F4E3BD;
+    color: rgb(0, 0, 0);
 }
