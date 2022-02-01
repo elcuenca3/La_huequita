@@ -30,6 +30,7 @@ const New = () => {
   });
 
   const ingredientsInputRef = useRef<HTMLInputElement>(null);
+  const huecaInputRef = useRef<HTMLInputElement>(null);
 
   const [message, setMessage] = useState([]);
 
@@ -64,6 +65,7 @@ const New = () => {
       const data: any = await res.json;
 
       if (!data.success) {
+        router.push("/platos");
         for (const key in data.error.errors) {
           let error = data.error.errors[key];
           setMessage((oldMessage) => ({
@@ -72,10 +74,11 @@ const New = () => {
           }));
         }
 
-        router.push("/platos");
+        
       }
     } catch (error) {
       console.log(error);
+      console.log("hola")
     }
   };
 
@@ -99,6 +102,21 @@ const New = () => {
     tempIngredients.splice(index, 1)
     setForm({ ...form, ingredientes: tempIngredients });
   };
+  const addhuecas = () => {
+    if (huecaInputRef.current?.value) {
+      const tempIngredients = [...form.huecas];
+      tempIngredients.push(huecaInputRef.current?.value);
+      setForm({ ...form, huecas: tempIngredients });
+      huecaInputRef.current.value = "";
+    }
+  };
+
+  const deletehuecas = (index: number) => {
+    const tempIngredients = [...form.huecas];
+    tempIngredients.splice(index, 1)
+    setForm({ ...form, huecas: tempIngredients });
+  };
+
 
   return (
     <div>
@@ -179,7 +197,7 @@ const New = () => {
           </div>
 
           {form.ingredientes.map((ingrediente, idx) => (
-            <li>
+            <li key={ingrediente+idx}>
               {ingrediente}{" "}
               <button onClick={() => deleteIngredinet(idx)}>X</button>
             </li>
@@ -206,15 +224,31 @@ const New = () => {
             onChange={handleChanege}
           />
           <p>huecas del plato:</p>
-          <input
-            autoComplete="off"
-            name="huecas"
-            className={style.box}
-            type="text"
-            placeholder="Ingrese la url de la Imagen "
-            value={form.huecas}
-            onChange={handleChanege}
-          />
+          
+                 <div className={style.ingredientsContainer}>
+            <input
+              autoComplete="off"
+              name="huecas"
+              className={style.box}
+              type="text"
+              placeholder="Ingrese los ingredientes del plato "
+              ref={huecaInputRef}
+            />
+            <button
+              type="button"
+              onClick={addhuecas}
+              className={style.addButton}
+            >
+              +
+            </button>
+          </div>
+
+          {form.huecas.map((huecas, idx) => (
+            <li key={huecas+idx}>
+              {huecas}{" "}
+              <button onClick={() => deletehuecas(idx)}>X</button>
+            </li>
+          ))}
           <p>Valor calorico del plato:</p>
           <input
             autoComplete="off"

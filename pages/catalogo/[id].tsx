@@ -12,7 +12,7 @@ const PlatoPage = ({catal}) => {
     const caregoriaId = router.query.id;
     console.log(caregoriaId)
     try {
-      await fetch(`/api/categoria/busqueda/${caregoriaId}`, {
+      await fetch(`/api/catalogo/busqueda/${caregoriaId}`, {
         method: "DELETE",
       });
       router.push("/catalogo");
@@ -43,7 +43,7 @@ const PlatoPage = ({catal}) => {
 
 
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context:any) {
   const {id} = context.params
   const res= await fetch(`http://localhost:3000/api/catalogo/busqueda/${id}`)
   const catal= await res.json()

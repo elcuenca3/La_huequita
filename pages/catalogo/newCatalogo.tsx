@@ -1,35 +1,25 @@
 import Header from "../../components/Header/header";
 import Footer from "../../components/Footer/footer";
 import style from "../../styles/formulario.module.css";
-import { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
+import { catalogoFormInteface } from "../../interfaces/dish-form.interface";
 const New = () => {
   const router = useRouter();
 
-  const [form, setForm] = useState({
+  const { query } = router;
+
+  console.log(query);
+
+  useEffect(() => {}, []);
+
+  const [form, setForm] = useState<catalogoFormInteface>({
     nombre: "",
-    imagen: "",
+    file: null,
   });
-
-  function previewFile() {
-    var preview = document.querySelector('img');
-    var file    = document.querySelector('input[type=file]').files[0];
-    var reader  = new FileReader();
-  
-    reader.onloadend = function () {
-      preview.src = reader.result;
-    }
-  
-    if (file) {
-      reader.readAsDataURL(file);
-    } else {
-      preview.src = "";
-    }
-  }
-
   const [message, setMessage] = useState([]);
 
-  const handleChanege = (e) => {
+  const handleChanege = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, name } = e.target;
     setForm({
       ...form,
@@ -37,41 +27,50 @@ const New = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     postData(form);
   };
 
-  const postData = async (form) => {
+  const postData = async (form: any) => {
+    console.log(form);
     try {
       console.log(form);
 
+      const formData = new FormData();
+
+      for (const name in form) {
+        formData.append(name, form[name]);
+      }
+
       const res = await fetch("/api/catalogo", {
         method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(form),
+        body: formData,
       });
-      const data = await res.json;
-      console.log(data);
-      router.push("/catalogo");
+      const data: any = await res.json;
+
       if (!data.success) {
         for (const key in data.error.errors) {
           let error = data.error.errors[key];
-          setMessage((oldMessage) => [
+          setMessage((oldMessage) => ({
             ...oldMessage,
-            { message: error.message },
-          ]);
+            message: error.message,
+          }));
         }
 
-        router.push("/catalogo");
+        router.push("/platos");
       }
     } catch (error) {
       console.log(error);
-      console.log("hola");
     }
   };
+
+  const handleFileChanges = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files?.item(0)) {
+      setForm({ ...form, file: e.target.files.item(0) });
+    }
+  };
+
   return (
     <div>
       <Header />
@@ -88,19 +87,15 @@ const New = () => {
             value={form.nombre}
             onChange={handleChanege}
           />
-          <p>Imagen de la categoria:</p>
-          <input
-            autoComplete="off"
-            name="imagen"
-            className={style.box}
-            type="file"
-            placeholder="Ingrese la url de la Imagen "
-            value={form.imagen}
-            defaultValue="https://raw.githubusercontent.com/RommelOjeda/imagenes/main/Catalogo/bebidas.jpg"
-            accept="image/*"
-            onChange={handleChanege}
-          />
-          <button className={style.boton} type="submit" onClick={postData}> Guardar </button>
+          <p>Selecione una images:</p>
+
+          <input type="file" accept="image/*" onChange={handleFileChanges} />
+          <p>La categoria del plato:</p>
+
+          <button className={style.boton} type="submit" onClick={postData}>
+            {" "}
+            Guardar{" "}
+          </button>
           {message.map(({ message }) => (
             <p key={message}> {message} </p>
           ))}

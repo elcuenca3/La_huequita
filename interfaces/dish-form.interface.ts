@@ -10,3 +10,11 @@ export interface DishFormInteface {
     calorias: string,
     file: File | null
 }
+export interface catalogoFormInteface {
+    nombre: string,
+    file: File | null
+}
+export interface huecasFormInteface {
+    nombre: string,
+    file: File | null
+}

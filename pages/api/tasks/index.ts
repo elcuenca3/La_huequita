@@ -15,6 +15,10 @@ handler.post(async(req:any, res:any) => {
 	try {
 		const file = req.files
 		const body = req.body
+        const ingredientes= req.body.ingredientes
+        const huecas= req.body.huecas
+        let arri = ingredientes.split(','); 
+        let arrh = huecas.split(','); 
         const oldpath = file.file.filepath;
        
         const relativePath = __dirname.split('\\');
@@ -25,7 +29,7 @@ handler.post(async(req:any, res:any) => {
         const currentTime = new Date().getTime().toString()   
         const newPath = path.join(relativePath.join('\\'), 'public','uploads', currentTime+file.file.originalFilename)
         fs.renameSync(oldpath, newPath)
-        const newPlato = new Plato({...body, imagen: `/uploads/${currentTime+file.file.originalFilename}`});
+        const newPlato = new Plato({...body, imagen: `/uploads/${currentTime+file.file.originalFilename}`,ingredientes:arri,huecas:arrh});
         const savedPlato = await newPlato.save();
         return res.status(201).json(savedPlato);
 	} catch (error) {

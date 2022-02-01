@@ -47,18 +47,18 @@ const PlatoPage = ({plato}:any) => {
         <div className={styles.menu}>
           <div className={styles.ingre}>
             <h4>Ingredientes</h4>
-            {plato.ingredientes.map((ingrediente:any)=><li>{ingrediente}</li>)}
+            {plato.ingredientes.map((ingrediente:any)=><li key={ingrediente}>{ingrediente}</li>)}
             <p className={styles.texts}/> 
           </div>
           <div className={styles.huec}>
           <h4>Donde Encontrarlo</h4> 
-          {plato.huecas.map((huecas:any)=><li className={styles.ubicacion}>
+          {plato.huecas.map((huecas:any)=><li key={huecas} className={styles.ubicacion}>
             {huecas}<a  href={`https://www.google.com.ec/maps/search/${huecas}`} className={styles.ubi}>Visitar</a></li>)}
           <p className={styles.texts2}/> 
           </div>
           <div className={styles.prep}>
           <h4>Preparacion</h4> 
-            {plato.preparacion.map((preparacion:any)=><li>{preparacion}</li>)}
+            {plato.preparacion.map((preparacion:any)=><li key={preparacion}>{preparacion}</li>)}
             <p className={styles.texts3}/> 
           </div>
           <div
