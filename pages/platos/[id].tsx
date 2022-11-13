@@ -29,7 +29,7 @@ const PlatoPage = ({plato}:any) => {
  
       <Header />
       <button className={styles.boton1} onClick={handleDelete}>
-            Eliminar
+            Eliminar plato
           </button>
           {message && <p>{message}</p>}
       
@@ -51,17 +51,20 @@ const PlatoPage = ({plato}:any) => {
        height="350"
        className={styles.img} 
        />
+       
      
       <div className={styles.page}>
+        
        <p className={styles.historia}><h4 style={{fontFamily:"Rouge Script",fontSize:"40px" }}>Hitoria</h4>{plato.historia}</p>
         <div className={styles.menu}>
           <div className={styles.ingre}>
             <h4>Ingredientes</h4>
             {plato.ingredientes.map((ingrediente:any)=><li key={ingrediente}>{ingrediente}</li>)}
             <p className={styles.texts}/> 
+            <p style={{justifyContent:"center",display:"flex",font:"icon"}}>Calorias totales : {plato.calorias}</p>
           </div>
           <div className={styles.huec}>
-          <h4>Donde Encontrarlo</h4> 
+          <h4 >Donde Encontrarlo</h4> 
           {plato.huecas.map((huecas:any)=><li key={huecas} className={styles.ubicacion}>
             {huecas}<a  href={`https://www.google.com.ec/maps/search/${huecas}`} className={styles.ubi}>Visitar</a></li>)}
           <p className={styles.texts2}/> 
@@ -70,6 +73,7 @@ const PlatoPage = ({plato}:any) => {
           <h4>Preparacion</h4> 
             {plato.preparacion.map((preparacion:any)=><li key={preparacion}>{preparacion}</li>)}
             <p className={styles.texts3}/> 
+            
           </div>
           <div
         style={{ display: "flex", justifyContent: "center", marginTop: "4.3em" }}

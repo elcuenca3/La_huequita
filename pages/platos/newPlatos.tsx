@@ -143,7 +143,6 @@ const New = () => {
           <input  type="file" accept="image/*" onChange={handleFileChanges} />
           <p>La categoria del plato:</p>
           
-          <img></img>
 
           <input
             autoComplete="off"
@@ -232,7 +231,7 @@ const New = () => {
               name="huecas"
               className={style.box}
               type="text"
-              placeholder="Ingrese los ingredientes del plato "
+              placeholder="Ingrese los huecas del plato "
               ref={huecaInputRef}
             />
             <button
@@ -256,7 +255,7 @@ const New = () => {
             name="calorias"
             className={style.box}
             type="text"
-            placeholder="Ingrese la url de la Imagen "
+            placeholder="Ingrese las calorias de los platos "
             value={form.calorias}
             onChange={handleChanege}
           />

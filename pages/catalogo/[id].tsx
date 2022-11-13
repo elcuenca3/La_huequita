@@ -25,7 +25,7 @@ const PlatoPage = ({catal}) => {
   return(  <div>
     <Header />
     <button className={styles.boton1} onClick={handleDelete}>
-            Eliminar
+            Eliminar categoria
           </button>
           {message && <p>{message}</p>}
       

@@ -69,7 +69,7 @@ const Header = () => {
                 <img
                 src="https://raw.githubusercontent.com/RommelOjeda/imagenes/main/header.jpg"
                 alt=""
-                width={"1536px"}
+                width={"1524px"}
                 height={"150px"}
                 />
             </div>

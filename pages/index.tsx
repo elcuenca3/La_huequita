@@ -6,7 +6,7 @@ import styles from "../styles/home.module.css";
 import Link from "next/link";
 import Footer from "../components/Footer/footer";
 
-const Home: NextPage = ({ cata }) => {
+const Home: NextPage = ({ cata }:any) => {
   return (
     <div >
       <Header />
@@ -73,7 +73,7 @@ const Home: NextPage = ({ cata }) => {
       <div className={styles.descrip}>
       <h2>No te decidiste aun...? Aquí tenemos unas Recomendaciones </h2>
       </div>
-      <div style={{display:"flex",padding:"20px" }}>
+      <div style={{display:"flex",padding:"50px" }}>
       {cata.map(cata=>
         (
             <CardCata key={cata._id} id={cata._id} imagen={cata.imagen} nombre={cata.nombre} />

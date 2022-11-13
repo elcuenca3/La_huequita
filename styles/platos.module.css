@@ -4,7 +4,7 @@
 }
 
 .page {
-    padding-top: 245px;
+    padding-top: 325px;
     display: block;
     flex-wrap: wrap;
 }
@@ -20,7 +20,7 @@
     font-size: x-large;
     text-align: center;
     justify-content: right;
-    margin: -25em 10em 100px 31.8em;
+    margin: -27em 10em 100px 31.8em;
     border-radius: 50px;
     padding-top: 2px;
     padding-bottom: 40px;
@@ -30,18 +30,20 @@
 }
 
 .ingre {
-    padding: 0px 40px 1%;
+    width: 400px;
+    padding: 0px 40px 0.5%;
     background-color: rgb(255, 207, 162);
-    margin: -1em 2em 0px 48em;
+    margin: -3.5em 2em 0px 48em;
     border-radius: 10px 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
     list-style-type: square;
 }
 
 .huec {
-    padding: 0px 20px 5px;
+    padding: 0px 20 px 5px;
     background-color: rgb(255, 207, 162);
-    margin: 7em 55em 0px 140px;
+    margin: -18em 55em 0px 140px;
     border-radius: 10px 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -49,7 +51,7 @@
 .prep {
     padding: 0px 20px 5px;
     background-color: rgb(247, 159, 77);
-    margin: -14.3em 2em 0px 48em;
+    margin: 7em 2em 0px 48em;
     border-radius: 10px 10px;
     text-align: left;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -116,7 +118,7 @@
 }
 
 .ubi {
-    display: inline;
+    display: flex;
     margin-left: 20px;
     height: max-content;
     width: max-content;
@@ -126,12 +128,11 @@
 
 .ubicacion {
     display: flex;
-    padding-bottom: 200px;
     padding: 10px;
 }
 
 .img {
     display: flex;
-    margin-top: 50px;
     object-fit: contain;
+    bottom: 500px;
 }

@@ -50,6 +50,7 @@ const New = () => {
       const data: any = await res.json;
 
       if (!data.success) {
+        router.push("/catalogo");
         for (const key in data.error.errors) {
           let error = data.error.errors[key];
           setMessage((oldMessage) => ({
@@ -58,7 +59,7 @@ const New = () => {
           }));
         }
 
-        router.push("/platos");
+        
       }
     } catch (error) {
       console.log(error);

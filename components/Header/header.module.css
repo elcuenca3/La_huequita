@@ -1,12 +1,12 @@
 .container {
     background-color: #e4802e;
-    padding: 5px;
     color: white;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
-.header1{
+
+.header1 {
     margin: -10px -325px;
     padding: 5px -6px;
     color: white;
@@ -14,7 +14,8 @@
     align-items: center;
     flex-wrap: wrap;
 }
-.logoa1{
+
+.logoa1 {
     margin: -20px -325px;
     padding: 5px -7px;
     color: white;
@@ -44,8 +45,8 @@
 }
 
 .menu>li:hover {
-    background-color: rgb(255, 236, 220);
-    border-radius: 50px 125px 100px 10px;
+    background-color: rgb(174, 232, 130);
+    border-radius: 150px 10px 150px 10px;
     color: rgb(0, 0, 0);
     transition: cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
